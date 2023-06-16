@@ -1,0 +1,607 @@
+:root {
+  /* lighter pry color */
+  --clr-primary-100: #A0EAFA;
+  /* light btn color */
+  --clr-light-btn: hsl(215, 100%, 87%);
+  /* darker pry color */
+  --clr-primary-200: #0043A2;
+  /* background color also doubles as btn color*/
+  --clr-primary-300: #FBFBFB;
+  /* text content color */
+  --clr-primary-400: #A8A8A8;
+  /* section background with transparency */
+  --clr-section-bg:hsla(215, 100%, 87%, 0.16);
+
+
+  /* darker sec color 1 */
+  --clr-secondary-100: #00204D;
+  /* darker sec color 2 */
+  --clr-secondary-200: #002D36;
+  /* darker sec color 3 */
+  --clr-secondary-300: #000000;
+  /* on hover state */
+  --clr-secondary-400: #BED9FF;
+  /* list icon */
+  --clr-secondary-500: #B87300;
+
+  /* paragraph */
+  --clr-paragraph: var(--clr-primary-400);
+  /* span */
+  --clr-span: var(--clr-primary-100);
+  /* header */
+  --clr-header: var(--clr-primary-200);
+  /* nav */
+  --clr-nav: var(--clr-secondary-300);
+
+  /* font-family */
+  --ff-primary: 'Clash Display', sans-serif;
+  --ff-secondary: 'Archivo', sans-serif;
+
+  --ff-heading: var(--ff-primary);
+  --ff-body: var(--ff-secondary);
+
+  /* font-weight */
+  --fw-primary-light: 300;
+  --fw-primary-regular: 400;
+  --fw-primary-semibold: 600;
+  --fw-primary-bold: 700;
+
+  --fw-secondary-xlight: 200;
+  --fw-secondary-regular: 400;
+  --fw-secondary-bold: 700;
+  --fw-secondary-black: 900;
+
+  /* font-size */
+  /* if the utility class is numbered the media query won't change it but the ones with names do change   */
+  /* calc */
+  /* The calc() function takes a single expression as its parameter, with the expression's result used as the value.  */
+  /* *
+  Multiplication. At least one of the arguments must be a <number>.
+  /
+  Division. The right-hand side must be a <number>. */
+
+  --fs-default: 16;
+
+  /* increaments of 2 to the px values */
+  --fs-xxs: calc((10 / var(--fs-default) * 1rem));
+  --fs-xsm: calc((12 / var(--fs-default) * 1rem));
+  --fs-sm: calc((14 / var(--fs-default) * 1rem));
+  --fs-100: calc((16 / var(--fs-default) * 1rem));
+  --fs-200: calc((18 / var(--fs-default) * 1rem));
+  --fs-300: calc((20 / var(--fs-default) * 1rem));
+  --fs-400: calc((22 / var(--fs-default) * 1rem));
+  --fs-500: calc((24 / var(--fs-default) * 1rem));
+  --fs-600: calc((26 / var(--fs-default) * 1rem));
+  --fs-700: calc((28 / var(--fs-default) * 1rem));
+  --fs-750: calc((30 / var(--fs-default) * 1rem));
+  --fs-800: calc((40 / var(--fs-default) * 1rem));
+  --fs-900: calc((48 / var(--fs-default) * 1rem));
+
+  --fs-nav: var(--fs-100);
+  --fs-primary-heading: var(--fs-900);
+  --fs-secondary-heading: var(--fs-800);
+  --fs-body: var(--fs-400);
+  --section-margin: var(--fs-750)
+
+  /* padding and margin utility classes */
+  --size-100: .25rem;
+  --size-200: .5rem;
+  --size-300: .75rem;
+  --size-400: 1rem;
+  --size-500: 1.25rem;
+  --size-600: 1.5rem;
+  --size-700: 2rem;
+  --size-800: 3rem;
+  --size-900: 4rem;
+
+  /* --flow-spacer:  */
+}
+
+/* font size on larger screens */
+@media (min-width: 50em) {
+  :root {
+    /* --fs-xxs: calc(12px / var(--fs-default))rem;;
+    --fs-xsm: calc(14px / var(--fs-default))rem;;
+    --fs-sm: calc(16px / var(--fs-default))rem;;
+    --fs-100: calc(18px / var(--fs-default))rem;;
+    --fs-200: calc(20px / var(--fs-default))rem;
+    --fs-300: calc(22px / var(--fs-default))rem;
+    --fs-400: calc(24px / var(--fs-default))rem;
+    --fs-500: calc(26px / var(--fs-default))rem;
+    --fs-600: calc(28px / var(--fs-default))rem;
+    --fs-700: calc(30px / var(--fs-default))rem;
+    --fs-800: calc(32px / var(--fs-default))rem;
+    --fs-900: calc(34px / var(--fs-default))rem; */
+
+    --fs-nav: var(--fs-100);
+    --fs-primary-heading: var(--fs-900);
+    --fs-secondary-heading: var(--fs-800);
+    --fs-body: var(--fs-400);
+  }
+}
+
+
+/* a function that converts pixels to rems */
+/* @function rem($pixels, $context: 16) {
+  @return calc($pixels / $context) * 1rem;
+} */
+/* a function that converts pixels to ems */
+/* for margins and paddings  */
+/* @function em($pixels, $context: 16) {
+  @return calc($pixels / $context) * 1em;
+} */
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* general styling */
+
+h1, 
+h2 {
+  font-family: var(--ff-primary);
+  color: var(--clr-primary-200);
+  font-weight: var(--fw-primary-bold);
+}
+
+h1 {
+  font-size: var(--fs-primary-heading);
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: var(--fs-secondary-heading);
+  line-height: 1.2;
+}
+
+p {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-300);
+  max-width: 45ch;
+}
+
+/* add this to p tags you want to span wider than the above styke */
+p[data-width="wide"]{
+  max-width: 60ch;
+}
+
+section {
+  padding-block: var(--size-900);
+}
+
+
+.gradient {
+  background: #0043A2;
+  background: linear-gradient(to bottom right, #0043A2 0%, #5BA2D4 50%, #A0EAFA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* .logo {
+  display: flex;
+  align-items: center;
+} */
+
+#sign-in {
+  color: var(--clr-primary-200);
+  font-weight: var(--fw-primary-semibold);
+  /* color: var(--clr-primary-100); */
+  box-shadow: 0 2px 0 0 currentcolor;
+}
+
+.faq-container {
+  --faq-max-width: 1285px;
+  --padding: 1rem;
+  width: min(var(--faq-max-width), 100% - var(--padding));
+  margin-inline: auto;
+}
+
+/* the p tags before the h2 */
+.sub-paragraph {
+  color: text-secondary-100;
+  font-weight: fw-secondary-regular;
+}
+
+.button {
+  display: inline-flex;
+  background-color: var(--clr-primary-200);
+  border-radius: 4.5px;
+  border: none;
+  color: var(--clr-primary-300);
+  cursor: pointer;
+  font-size: 15px;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-primary-semibold);
+  padding: 0.65em  1.5em;
+  -webkit-box-shadow: -5px 5px 0px 0px var(--clr-secondary-400);
+  -moz-box-shadow: -5px 5px 0px 0px var(--clr-secondary-400);
+  box-shadow: -5px 5px 0px 0px var(--clr-secondary-400);
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--clr-light-btn);
+  color: var(--clr-primary-200);
+  -webkit-box-shadow: -5px 5px 0px 0px rgba(0,67,162,1);
+  -moz-box-shadow: -5px 5px 0px 0px rgba(0,67,162,1);
+  box-shadow: -5px 5px 0px 0px rgba(0,67,162,1);
+}
+
+.button[data-subscribe-btn="darker-btn"]{
+  background-color: var(--clr-secondary-100);
+  box-shadow: none;
+}
+
+.button[data-subscribe-btn="darker-btn"]:hover,
+.button[data-subscribe-btn="darker-btn"]:focus-visible{
+  /* background-color: red; */
+  color: var(--clr-primary-300);
+  box-shadow: var(--clr-secondary-400) 0px 0px 0px 3px;
+  /* box-shadow: var(--clr-secondary-400); */
+}
+
+.button-stack {
+  display: flex;
+  align-items: center;
+  gap: var(--size-500);
+}
+
+.primary-header {
+  margin-top: var(--size-700);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--clr-nav);
+  font-weight: var(--fw-secondary-regular);
+  
+}
+
+.nav-list {
+  display: flex;
+  gap: clamp(var(--size-500), 4.2vw, var(--size-800));
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  color: var(--clr-secondary-100);
+  box-shadow: 0 2px 0 0 currentcolor;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.carousel-courses {
+  display: flex;
+  justify-content: center;
+  gap: var(--size-800);
+}
+
+.carousel-course-card {
+  /* background-color: hsla(215, 100%, 87%, 0.66); */
+  background-color: var(--clr-section-bg);
+  /* width: 800px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 8px;
+  padding-inline: 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 180px;
+  height: 130px;
+}
+
+@media (max-width: 50em){
+  /* on smaller screen hide the nav menu */
+  .primary-navigation {
+    display: none;
+
+    padding: var(--size-800);
+    /* with absolute the menu will scroll along with the page as opposed to fied where the  menu just sticks there */
+    position: absolute;
+    inset: 7rem var(--size-700) auto;
+    background: var(--clr-secondary-100);
+    border-radius: calc((4 / 16) * 1rem);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+  }
+
+  .primary-navigation::after {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    inset: 0;
+    /* background-color: red; */
+  }
+
+  .primary-navigation[data-visible] {
+    display: block;
+  }
+
+  .nav-list {
+    display: grid;
+    gap: var(--size-700);
+    text-align: center;
+    /* font-size: var(--fs-nav); */
+  }
+
+  .nav-list a {  
+    color: var(--clr-primary-300);
+    text-decoration: none;
+    font-weight: var(--fw-primary-semibold);
+    transition: .25s ease;
+  }
+
+  .nav-list a:hover,
+  .nav-list a:focus {
+    color: var(--clr-primary-100);
+    box-shadow: 0 2px 0 0 currentcolor;
+  }
+
+  /* .primary-navigation[data-visible]:hover {
+    box-shadow: rgba(121, 211, 244, 0.144) 0px 20px 10px 4px;
+  } */
+
+  /* on smaller screen show the hamburger menu icon */
+  .mobile-nav-toggle {
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0.5em;
+  }
+
+  .mobile-nav-toggle .icon-close{
+    display: none;
+  }
+}
+
+/* .opened {
+  display: block;
+  position: fixed;
+} */
+
+.section-1-img {
+  width: clamp(500px, 75%, 900px);
+  max-width: 100%;
+  /* background-color: red; */
+}
+
+
+/* utility classes */
+.container {
+  --max-width: 1077px;
+  --padding: 1rem;
+  /* choose the smaller value between the custom variable and 100% */
+  /* the minus takes a padding of 1rem * 2 from both sides of the container */
+  width: min(var(--max-width), 100% - (var(--padding) * 5));
+  margin-inline: auto;
+}
+
+/* chosses every sibling in the div except the first  */
+/* div-parent 
+div-first-child doesn't pick
+div-second-child picks
+div-nth-child picks */
+
+/* .flow > * + * {
+  outline: 4px solid red;
+} */
+
+/* or use */
+/* the reason its wrapped in a where is becase of specificty
+the (.flow > :not(:first-child)) pseudo class has a strong specificity if you wanted to manipulate something that's attached to this later on it might be hard to fix so wrapping it in where removes the strong specificity*/
+:where(.flow > :not(:first-child)){
+  margin-top: var(--flow-spacer, 2em);
+}
+
+:where(.extra-height > :first-child){
+  /* height: 85vh; */
+  display: flex;
+  align-items: center;
+}
+
+:where(.extra-height > :nth-child(2)){
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.even-columns {
+  display: grid;
+  gap: 5rem;
+}
+
+@media (min-width: 50em) {
+
+  .display-md-inline-flex {
+    display: inline-flex;
+  }
+
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 2fr,1fr;
+  }
+}
+/* text color class*/
+.text-primary-100 {
+  color: var(--clr-primary-100);
+}
+.text-primary-200 {
+  color: var(--clr-primary-200);
+}
+.text-primary-400 {
+  color: var(--clr-primary-400);
+}
+.text-secondary-100 {
+  color: var(--clr-secondary-100);
+}
+.text-secondary-200 {
+  color: var(--clr-secondary-100);
+}
+
+/* bg color class*/
+.bg-section-transparent {
+  display: flex;
+  align-items: center;
+  background-color: var(--clr-section-bg);
+  height: clamp(400px, 10vh, 800px);
+}
+.bg-primary-100 {
+  background-color: var(--clr-primary-100);
+}
+.bg-primary-200 {
+  background-color: var(--clr-primary-200);
+}
+
+/* font family */
+.ff-primary {
+  font-family: var(--ff-heading);
+}
+
+.ff-secondary {
+  font-family: var(--ff-body);
+}
+
+/* font weight class */
+.fw-primary-light { 
+  font-weight:  var(--fw-primary-light); 
+}
+.fw-primary-regular { 
+  font-weight:  var(--fw-primary-regular); 
+}
+
+.fw-primary-semi-bold { 
+  font-weight:  var(--fw-primary-semibold); 
+}
+.fw-primary-bold { 
+  font-weight:  var(--fw-primary-bold); 
+}
+
+.fw-secondary-xlight { 
+  font-weight:  var(--fw-secondary-xlight); 
+}
+.fw-secondary-regular { 
+  font-weight:  var(--fw-secondary-regular); 
+}
+.fw-secondary-bold { 
+  font-weight:  var(--fw-secondary-bold); 
+}
+.fw-secondary-black { 
+  font-weight:  var(--fw-secondary-black); 
+}
+
+/* font size */
+.fs-nav {
+  font-size: var(--fs-nav);
+}
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+}
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+}
+.fs-body {
+  font-size: var(--fs-body);
+}
+.fs-xxs {
+  font-size: var(--fs-xxs);
+}
+.fs-xsm {
+  font-size: var(--fs-xsm);
+}
+.fs-sm {
+  font-size: var(--fs-sm);
+}
+.padding-block-400 {
+  padding-block: var(--size-400);
+}
+.padding-block-700 {
+  padding-block: var(--size-700);
+}
+.padding-block-900 {
+  padding-block: var(--size-900);
+  /* background-color: red; */
+}
+.display-sm-none {
+  display: none;
+}
+
+
+
+

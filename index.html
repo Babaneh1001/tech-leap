@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- use this to change the icon to tech leap's -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Leap</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,700,600,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200;400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body class="prevent-scroll">
+
+    <header class="primary-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- <div class="logo"> -->
+          <a href="#"><img src="" alt="tech-leap-logo"></a>
+          <!-- hamburger icon -->
+          <!-- the aria-controls is like a reference, it let's screen readers know what contents or block of elements the element that has that property (aria-controls) set it will refernece the id of the element we are controlling ,
+          for example the button (the controller) has an aria-controls = "primary-navigation", and the nav element (the controlled), is what is controlled by it -->
+          <!-- aria-controls identifies the element(s) whose contents are controlled by the current element. In other words, its purpose is to indicate that an element controls another one. Examples include control buttons for a video, or a button that opens and closes a collapsible element. -->
+          <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="visually-hidden">Menu</span>
+            <img src="" alt="hanburger-icon-open" aria-hidden="true" class="icon-hamburger">
+            <img src="hanburger-close" alt="hanburger-icon-close" aria-hidden="true" class="icon-close">
+          </button>
+          <!-- </div> -->
+          <nav class="primary-navigation"  id="primary-navigation">
+            <ul  role="list" class="nav-list ff-secondary fw-secondary-regular fs-nav">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Mentors</a></li>
+              <li><a href="#">About</a></li>
+              <li><a id="sign-in" href="#">Sign in</a></li>
+            </ul>
+          </nav>
+          <button class="button | display-sm-none display-md-inline-flex ">Get Started</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="extra-height">
+      <section>
+        <div class="container extra-height">
+          <div class="even-columns">
+            <div class="flow">
+              <h1 style="line-height: 60px;font-weight: 600;
+              font-size: 48px; color: #00204D;">Find your perfect <br> course & 
+              <span class="gradient"> grow </span> <br>
+              <span class="gradient">your  skills</span>
+              </h1>
+              <p class="ff-secondary text-primary-400 fw-secondary-regular">Get quality courses with us with the best price.  We have top mentors around the globe. </p>
+              <div class="button-stack">
+                <div>
+                  <button class="button">Get Started</button>
+                </div>
+                <div class="play-video">
+                  <img src="" alt="play-icon">
+                  <p class="text-primary-200 fw-secondary-regular fs-sm">Play Video</p>
+                </div>
+              </div>
+            </div>
+            <div class="section-1-img">
+              <img src="./assets/images/artsy-illustration.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- this section spreads more to both ends of the page than the other sectionsO -->
+      <section>
+        <div class="container">
+          <div class="even-rows">
+            <div> 
+              <p class="sub-paragraph">Courses we offer</p>
+              <h2 class="text-primary-200 fw-primary-semi-bold">
+                Learn any tech course, anytime, anywhere on our platform
+              </h2> 
+            </div>
+            <div class="carousel-course-group">
+              <img src="" alt="">
+              <div class="carousel-courses">
+                <div class="carousel-course-card">
+                  <img src="" alt="uiux-course">
+                  <h3>UI/UX Design</h3>
+                </div>
+                <div class="carousel-course-card">
+                  <img src="" alt="uiux-course">
+                  <h3>Web Development</h3>
+                </div>
+                <div class="carousel-course-card">
+                  <img src="" alt="uiux-course">
+                  <h3>Digital Marketing</h3>
+                </div>
+                <div class="carousel-course-card">
+                  <img src="" alt="uiux-course">
+                  <h3>Cyber Security</h3>
+                </div>
+                <div class="carousel-course-card">
+                  <img src="" alt="uiux-course">
+                  <h3>Cyber Security</h3>
+                </div>
+              </div>
+              <img src="" alt="">
+            </div>
+            <!-- transitions as the course is toggled -->
+            <div class="indicator"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-section-transparent">
+        <div class="container">
+          <div class="even-rows">
+            <div class="even-columns">
+              <div> 
+                <p class="sub-paragraph">How to learn with us</p>
+                <h2 class="text-primary-200 fw-primary-semi-bold">
+                  Choose your path to success with our flexible learning options
+                </h2> 
+              </div>
+              <div>
+                <p class="ff-secondary text-primary-400 fw-secondary-regular">Get quality courses with us with the best price. We have top mentors around the globe.</p>
+                <button class="button">Get Started</button>
+              </div>
+            </div>
+            <div class="embedded-video"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- create a section that contains these buzz words and use position absolute to kick it off the actual view and then position the characters too -->
+      <section class="displaced-text">
+        <div class="container">
+          <h2 class="transparent-text">Accessible</h2>
+          <h2 class="transparent-text">Trustworthy</h2>
+          <h2 class="transparent-text">Practical</h2>
+          <h2 class="transparent-text">Practical</h2>
+          <h2 class="transparent-text">Flexible</h2>
+          <h2 class="transparent-text">Practical</h2>
+        </div>
+      </section>
+
+      <!-- value-carousel -->
+      <section>
+        <div class="container">
+          <div class="even-rows">
+            <div> 
+              <h2 class="text-primary-200 fw-primary-semi-bold">
+                What makes us different?
+              </h2> 
+              <p class="ff-secondary text-primary-400 fw-secondary-regular">Get quality courses with us with the best price. We have top mentors around the globe.</p>
+            </div>
+            <div class="value-carousel">
+              <div class="value-carousel-card">
+                <img src="" alt="">
+                <h4>Trusted  content</h4>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="even-rows">
+            <div> 
+              <p class="sub-paragraph">Why choose us</p>
+              <h2 class="text-primary-200 fw-primary-semi-bold">
+                Choose your path to success with our flexible learning options
+              </h2> 
+              <p data-width="wide" class="ff-secondary text-primary-400 fw-secondary-regular">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,</p>
+            </div>
+            <div class="even-columns">
+              <div>
+                <img src="" alt="">
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    <img src="" alt="">
+                    <p class="ff-secondary text-primary-400"></p>
+                  </li>
+                </ul>
+                <button class="button">Learn more</button>
+              </div>
+            </div>
+            <div class="embedded-video"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- testimonials -->
+      <section class="bg-section-transparent">
+        <div class="container">
+          <div class="even-rows">
+            <h2 class="text-primary-200 fw-primary-semi-bold">
+              Choose your path to success with our flexible learning options
+            </h2>
+            <div class="testimonial-carousel">
+              <img src="" alt="">
+              <div>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
+                <p>Elizabeth Adeyemo (Data analysis alumni)</p>
+                <!-- image of student -->
+              </div>
+              <img src="" alt="">
+            </div>
+            <!-- transitions as the course is toggled -->
+            <div class="indicator"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- overlayed background section -->
+      <section>
+        <div class="container">
+          <div class="even-columns">
+            <div>
+              <h1 >
+                Learn any tech course, anytime, anywhere on our platform
+              </h1>
+            </div>
+            <div>
+              <button class="button">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ section -->
+      <section>
+        <div class="faq-container">
+          <ul>
+            <li>
+              <div class="drop-down-activator">
+                <h3>What is techleap?</h3>
+                <img src="" alt="">
+              </div>
+              <div class="show-drop-down">
+                <p>
+                  Tech leap is a platform that helps people transition into the tech industry with the aim of providing them with the resources and support regardless of their background or prior experience.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="newsletter">
+          <div class="even-columns">
+            <!-- z-index to bring forward and maybe some positioning -->
+            <div>
+              <p style="color: hsla(37, 100%, 36%, 1);">JOIN OUR COMMUNITY</p>
+              <div>
+                <h2>Newsletters </h2>
+                <img src="" alt="email-icon">
+              </div>
+              <p>Stay up to date with events and successes of techleap. We have built resources to help you learn about our tools and courses</p>
+              <form action="">
+                <input type="email" name="user-email" id="" placeholder="Email Address">
+                <button class="button
+                " data-subscribe-btn="darker-btn">Subscribe</button>
+              </form>
+            </div>
+            <div>
+              <img src="" alt="collection-of-students">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- secndary navigation -->
+      <div class="container">
+        <div class="even-columns
+        even-columns secondary-navigation">
+          <div>
+            <img src="" alt="techleap-logo">
+            <p>Tech leap is a platform that helps people transition into the tech industry with the aim of providing them with the resources and support regardless of their background or prior experience.
+            </p>
+            <ul>
+              <li><a href=""><img src="" alt="facebook-icon"></a></li>
+              <li><a href=""><img src="" alt="twitter-icon"></a></li>
+              <li><a href=""><img src="" alt="linkedin-icon"></a></li>
+              <li><a href=""><img src="" alt="instagram-icon"></a></li>
+            </ul>
+          </div>
+          <div class="nav-links">
+            <div>
+              <p>Our Courses</p>
+              <ul>
+                <li>
+                  <img src="" alt="">
+                  <p></p>
+                </li>
+                <li>
+                  <img src="" alt="">
+                  <p></p>
+                </li>
+                <li>
+                  <img src="" alt="">
+                  <p></p>
+                </li>
+                <li>
+                  <img src="" alt="">
+                  <p></p>
+                </li>
+                <li>
+                  <img src="" alt="">
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
