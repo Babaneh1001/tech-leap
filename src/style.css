@@ -200,7 +200,6 @@ picture {
 }
 
 /* general styling */
-
 h1, 
 h2 {
   font-family: var(--ff-primary);
@@ -218,13 +217,24 @@ h2 {
   line-height: 1.2;
 }
 
+@media (max-width: 40em){
+  p,
+  h2 {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: var(--fs-700);
+  }
+}
+
 p {
   font-family: var(--ff-secondary);
   font-size: var(--fs-300);
   max-width: 45ch;
 }
 
-/* add this to p tags you want to span wider than the above styke */
+/* add this to p tags you want to span wider than the above style */
 p[data-width="wide"]{
   max-width: 60ch;
 }
@@ -233,18 +243,12 @@ section {
   padding-block: var(--size-900);
 }
 
-
 .gradient {
   background: #0043A2;
   background: linear-gradient(to bottom right, #0043A2 0%, #5BA2D4 50%, #A0EAFA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-/* .logo {
-  display: flex;
-  align-items: center;
-} */
 
 #sign-in {
   color: var(--clr-primary-200);
@@ -328,7 +332,6 @@ section {
   text-decoration: none;
   color: var(--clr-nav);
   font-weight: var(--fw-secondary-regular);
-  
 }
 
 .nav-list {
@@ -498,6 +501,35 @@ the (.flow > :not(:first-child)) pseudo class has a strong specificity if you wa
     grid-auto-columns: 2fr,1fr;
   }
 }
+
+@media (max-width: 50em){
+  .sub-text-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--size-600);
+  }
+}
+.play-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  /* color: hsl(215, 100%, 32%); */
+  background: linear-gradient(0deg, hsla(215, 100%, 32%, 0.54), hsla(215, 100%, 32%, 0.6)), url(../assets/images/Image\ 2.png);
+  height: 480px;
+    background-size: cover;
+  /* background-image: url(../assets/images/Image\ 2.png); */
+  width: 1096px;
+  max-width: 100%;
+  background-repeat: no-repeat;
+}
+
+.bg-section-transparent[data-add-vh-max]{
+  height: 100%;
+}
+
 /* text color class*/
 .text-primary-100 {
   color: var(--clr-primary-100);
@@ -601,6 +633,8 @@ the (.flow > :not(:first-child)) pseudo class has a strong specificity if you wa
 .display-sm-none {
   display: none;
 }
+
+
 
 
 
