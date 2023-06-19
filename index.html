@@ -18,13 +18,13 @@
       <div class="container">
         <div class="nav-wrapper">
           <!-- <div class="logo"> -->
-          <a href="#"><img src="" alt="tech-leap-logo"></a>
+          <a href="#"><img data-tech-leap-logo src="./assets/icons/techleap-logo-b-w.png" alt="tech-leap-logo"></a>
           <!-- hamburger icon -->
           <!-- the aria-controls is like a reference, it let's screen readers know what contents or block of elements the element that has that property (aria-controls) set it will refernece the id of the element we are controlling ,
           for example the button (the controller) has an aria-controls = "primary-navigation", and the nav element (the controlled), is what is controlled by it -->
           <!-- aria-controls identifies the element(s) whose contents are controlled by the current element. In other words, its purpose is to indicate that an element controls another one. Examples include control buttons for a video, or a button that opens and closes a collapsible element. -->
           <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="visually-hidden">Menu</span>
-            <img src="" alt="hanburger-icon-open" aria-hidden="true" class="icon-hamburger">
+            <img style="width: 25px; color: red" src="./assets/icons/burger-menu-right-svgrepo-com.svg" alt="hanburger-icon-open" aria-hidden="true" class="icon-hamburger">
             <img src="hanburger-close" alt="hanburger-icon-close" aria-hidden="true" class="icon-close">
           </button>
           <!-- </div> -->
@@ -68,7 +68,7 @@
               </div>
             </div>
             <div class="section-1-img">
-              <img src="./assets/images/artsy-illustration.png" alt="">
+              <img src="./assets/img/main-img.png" alt="">
             </div>
           </div>
         </div>
@@ -88,23 +88,33 @@
               <img src="" alt="">
               <div class="carousel-courses">
                 <div class="carousel-course-card">
-                  <img src="" alt="uiux-course">
+                  <div class="circle">
+                    <img src="./assets/icons/ux.png" alt="uiux-course-icon">
+                  </div>
                   <h3>UI/UX Design</h3>
                 </div>
                 <div class="carousel-course-card">
-                  <img src="" alt="uiux-course">
+                  <div class="circle">
+                    <img src="./assets/icons/web-dev.png" alt="web-dev-course-icon">
+                  </div>
                   <h3>Web Development</h3>
                 </div>
                 <div class="carousel-course-card">
-                  <img src="" alt="uiux-course">
+                  <div class="circle">
+                    <img src="./assets/icons/digital-marketing.png" alt="digital-marketing-course-icon">
+                  </div>
                   <h3>Digital Marketing</h3>
                 </div>
                 <div class="carousel-course-card">
-                  <img src="" alt="uiux-course">
-                  <h3>Cyber Security</h3>
+                  <div class="circle">
+                    <img src="./assets/icons/product-management.png" alt="product-management-course-icon">
+                  </div>
+                  <h3>Product Management</h3>
                 </div>
                 <div class="carousel-course-card">
-                  <img src="" alt="uiux-course">
+                  <div class="circle">
+                    <img src="./assets/icons/cyber-security.png" alt="cyber-security-course-icon">
+                  </div>
                   <h3>Cyber Security</h3>
                 </div>
               </div>
@@ -266,21 +276,21 @@
         <div class="newsletter">
           <div class="even-columns">
             <!-- z-index to bring forward and maybe some positioning -->
-            <div>
-              <p style="color: hsla(37, 100%, 36%, 1);">JOIN OUR COMMUNITY</p>
-              <div>
-                <h2>Newsletters </h2>
-                <img src="" alt="email-icon">
+            <div class="control-flow"> 
+              <p class="join-comm-txt">JOIN OUR COMMUNITY</p>
+              <div class="newsletter-txt-icon">
+                <h2 class="text-secondary-100 fw-primary-semi-bold">Newsletters </h2>
+                <img style="height: 30px; width: 30px;" src="./assets/icons/newsletter.png" alt="email-icon">
               </div>
-              <p>Stay up to date with events and successes of techleap. We have built resources to help you learn about our tools and courses</p>
+              <p class="fs-sm" data-newsletter>Stay up to date with events and successes of techleap. We have built resources to help you learn about our tools and courses</p>
               <form action="">
                 <input type="email" name="user-email" id="" placeholder="Email Address">
                 <button class="button
                 " data-subscribe-btn="darker-btn">Subscribe</button>
               </form>
             </div>
-            <div>
-              <img src="" alt="collection-of-students">
+            <div class="newsletter-students">
+              <img src="./assets/img/newsletter-img.png" alt="collection-of-students">
             </div>
           </div>
         </div>
