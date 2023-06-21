@@ -239,6 +239,13 @@ p[data-width="wide"]{
   max-width: 60ch;
 }
 
+.secondary-text-grey-paragraph {
+  /* font-family: var(--ff-secondary);  */
+  color: var(--clr-primary-400);
+  font-weight: var(--fw-secondary-regular);
+  padding-block: 50px;
+}
+
 section {
   padding-block: var(--size-900);
   height: 100%;
@@ -267,8 +274,8 @@ section {
 
 /* the p tags before the h2 */
 .sub-paragraph {
-  color: text-secondary-100;
-  font-weight: fw-secondary-regular;
+  color: var(--clr-secondary-100);
+  font-weight: var(--fw-secondary-regular);
 }
 
 .button {
@@ -286,9 +293,7 @@ section {
   -moz-box-shadow: -5px 5px 0px 0px var(--clr-secondary-400);
   box-shadow: -5px 5px 0px 0px var(--clr-secondary-400);
 }
-
-.button:hover,
-.button:focus-visible {
+.button:where(:hover, :focus-visible){
   background-color: var(--clr-light-btn);
   color: var(--clr-primary-200);
   -webkit-box-shadow: -5px 5px 0px 0px rgba(0,67,162,1);
@@ -301,8 +306,7 @@ section {
   box-shadow: none;
 }
 
-.button[data-subscribe-btn="darker-btn"]:hover,
-.button[data-subscribe-btn="darker-btn"]:focus-visible{
+.button[data-subscribe-btn="darker-btn"]:where(:hover,:focus-visible){
   /* background-color: red; */
   color: var(--clr-primary-300);
   box-shadow: var(--clr-secondary-400) 0px 0px 0px 3px;
@@ -313,6 +317,41 @@ section {
   display: flex;
   align-items: center;
   gap: var(--size-500);
+}
+
+button:where([data-play-btn], [data-play-btn-inverse]) {
+  display: flex;
+  color: none;
+  background-color: transparent;
+  border: none;
+}
+
+img[data-play-icon] {
+  color: none;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+img[data-play-btn-icon] {
+  color: none;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+img[data-play-icon]:where(:hover, :focus){
+  background-color: var(--clr-light-btn);
+  border: none;
+  cursor: pointer;
+}
+
+img[data-play-btn-icon]:where(:hover, :focus){
+  background-color: var(--clr-light-btn);
+  border: none;
+  cursor: pointer;
 }
 
 .primary-header {
@@ -487,6 +526,7 @@ img[data-tech-leap-logo]{
     gap: var(--size-600);
   }
 }
+
 .play-video {
   position: relative;
   display: flex;
@@ -520,6 +560,75 @@ img[data-tech-leap-logo]{
   background: linear-gradient(0deg, hsla(215, 100%, 32%, 0.54), hsla(215, 100%, 32%, 0.6));
   z-index: -1;
   opacity: 0.92;
+}
+
+.value-carousel {
+  /* display: flex;
+  gap: 50px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-gap: 50px;
+  align-items: center;
+}
+
+@media(max-width: 40em) {
+  .value-carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+}
+
+.value-carousel-card {
+  width: clamp(200px, 15vw, 100%);
+  padding-inline: 20px;
+  padding-block: 40px;
+  box-shadow: rgba(209, 208, 208, 0.388) -3px 1px 7px 1px;
+  background-color: #ffffff;
+  /* border: 1px solid red; */
+  border-radius: 6px;
+}
+
+.value-carousel-card:hover {
+  background-color: var(--clr-secondary-400);
+  /* border: 1px solid green; */
+}
+
+.value-carousel-card img {
+  width: 30px;
+}
+
+.value-carousel-card h4 {
+  font-family: var(--ff-primary);
+  color: var(--clr-primary-200);
+  font-weight: var(--fw-primary-bold);
+}
+
+.value-carousel-card p {
+  font-size: var(--fs-xsm);
+  max-width: 25ch;
+}
+
+.section-5-img {
+  width: clamp(400px, 55%, 600px);
+  max-width: 100%;
+}
+
+.why-choose-us {
+  padding-top: 60px;
+}
+
+.check-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.check-list img {
+  width: 30px;
 }
 
 /* footer */
@@ -577,6 +686,127 @@ img[data-tech-leap-logo]{
     margin-bottom: 30px;
   }
 }
+
+.undisplaced-group {
+  display: flex;
+  gap: 50px;
+}
+
+.undisplaced-group :where(h2) {
+  color: hsla(215, 100%, 15%, 0.04);
+  margin-inline: auto;
+  padding-top: 5px;
+}
+
+.undisplaced-group :where(:nth-child(2)) {
+  position: relative;
+  top: 60px;
+}
+
+.undisplaced-group :where(:nth-child(3)) {
+  position: relative;
+  top: 20px;
+}
+
+.displaced-text {
+  /* position: absolute;
+  top: 800px;
+  left: 250px; */
+  padding: 0;
+  margin-top: 20px;
+}
+
+.displaced-text {
+  position: relative;
+  /* background-color: red; */
+}
+
+.displaced-group {
+  display: flex;
+  gap: 50px;
+  position: absolute;
+  display: flex;
+  /* margin-inline: auto; */
+  top: 200px;
+}
+
+.displaced-group :where(h2) {
+  color: hsla(215, 100%, 15%, 0.04);
+}
+
+.displaced-group :where(:nth-child(1)) {
+  position: relative;
+  top: -50px;
+}
+
+.displaced-group :where(:nth-child(3)) {
+  position: relative;
+  top: -30px;
+}
+
+@media(max-width: 55em){
+  .bg-section-transparent[data-add-vh-max] {
+    margin-bottom: 0px !important;
+  }
+
+  .undisplaced-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+  }
+
+  .undisplaced-group :where(:nth-child(2)) {
+    top: 0px;
+  }
+
+  .undisplaced-group :where(:nth-child(3)) {
+    top: 0px;
+  }
+
+  .displaced-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0px;
+
+  }
+
+  .displaced-group :where(:nth-child(1)) {
+    position: relative; 
+    top: 0px;
+  }
+
+  .displaced-group :where(:nth-child(3)) {
+    position: relative;
+    top: 0px;
+  }
+}
+
+
+/* 
+.text-1 {
+  grid-area: accessible;
+}
+.text-2 {
+  grid-area: trustworthy;
+}
+.text-3 {
+  grid-area: practical;
+}
+.text-4 {
+  grid-area: innovative;
+}
+.text-5 {
+  grid-area: flexible;
+}
+.text-6 {
+  grid-area: practical;
+} */
 
 
 /* utility classes */
@@ -637,7 +867,10 @@ the (.flow > :not(:first-child)) pseudo class has a strong specificity if you wa
 }
 
 .bg-section-transparent[data-add-vh-max]{
+  position: relative;
   height: 100%;
+  padding-bottom: 5rem;
+  margin-bottom: 100px;
 }
 
 /* text color class*/
@@ -660,6 +893,7 @@ the (.flow > :not(:first-child)) pseudo class has a strong specificity if you wa
 /* bg color class*/
 .bg-section-transparent {
   display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: var(--clr-section-bg);
   height: clamp(400px, 10vh, 800px);
