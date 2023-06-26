@@ -9,6 +9,8 @@
   --clr-primary-300: #FBFBFB;
   /* text content color */
   --clr-primary-400: #A8A8A8;
+  /* white */
+  --clr-primary-white: #ffffff;
   /* section background with transparency */
   --clr-section-bg:hsla(215, 100%, 87%, 0.16);
 
@@ -219,6 +221,7 @@ h2 {
 
 @media (max-width: 40em){
   p,
+  h1,
   h2 {
     text-align: center;
   }
@@ -231,7 +234,7 @@ h2 {
 p {
   font-family: var(--ff-secondary);
   font-size: var(--fs-300);
-  max-width: 45ch;
+  /* max-width: 45ch; */
 }
 
 /* add this to p tags you want to span wider than the above style */
@@ -243,7 +246,8 @@ p[data-width="wide"]{
   /* font-family: var(--ff-secondary);  */
   color: var(--clr-primary-400);
   font-weight: var(--fw-secondary-regular);
-  padding-block: 50px;
+  padding-block: 2rem;
+  width: 100%;
 }
 
 section {
@@ -266,16 +270,110 @@ section {
 }
 
 .faq-container {
-  --faq-max-width: 1285px;
+  --faq-max-width: 1685px;
   --padding: 1rem;
   width: min(var(--faq-max-width), 100% - var(--padding));
   margin-inline: auto;
 }
 
+.faq-container h2{
+  text-align: center;
+  margin-block: 50px;
+}
+
+summary.sub-paragraph {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-750);
+  color: var(--clr-primary-200);
+}
+
+/* .arrow-down button {
+  background-color: transparent;
+  border: none;
+} */
+
+hr {
+  border: .013em solid hsla(215, 100%, 32%, 0.051);
+  margin-bottom: 60px;
+}
+
+/* .drop-down-activator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  flex-direction: column;
+} */
+
+details {
+  /* background-color: red; */
+}
+
+
+summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  list-style: none;
+  padding: 10px;
+  padding-inline: 200px;
+}
+
+summary:focus {
+  outline: none;
+}
+
+details[open] .arrow-down img {
+  transform: rotate(90deg);
+}
+
+.summary-title {
+  user-select: none;
+}
+
+.summary-title:hover {
+  cursor: pointer;
+}
+
+.show-drop-down-content {
+  cursor: default;
+  padding: 10px;
+}
+
+.show-drop-down-content p{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  list-style: none;
+  padding: 10px;
+  padding-inline: 200px;
+  color: var(--clr-primary-400);
+}
+
 /* the p tags before the h2 */
 .sub-paragraph {
-  color: var(--clr-secondary-100);
+  /* color: var(--clr-secondary-100); */
+  /* color: var(--clr-secondary-400); */
+  color: var(--clr-primary-white);
   font-weight: var(--fw-secondary-regular);
+}
+
+.sub-paragraph[data-darker] {
+  color: var(--clr-secondary-100);
+}
+
+h2[data-light-txt-drk-bg] {
+  /* padding-bottom: 50px; */
+  color: var(--clr-secondary-400);
+  font-weight:  var(--fw-primary-semibold); 
+  max-width: 25ch;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
 }
 
 .button {
@@ -381,6 +479,7 @@ img[data-tech-leap-logo]{
 
 .nav-list {
   display: flex;
+  align-items: center;
   gap: clamp(var(--size-500), 4.2vw, var(--size-800));
 }
 
@@ -391,6 +490,20 @@ img[data-tech-leap-logo]{
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+section[data-our-courses] {
+  background-color: var(--clr-secondary-100);
+  background-image: url(../assets/img/dark-bg-with-waves.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+.carousel-courses {
+  padding-block: 30px;
+}
+
+
 .carousel-courses {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -400,17 +513,18 @@ img[data-tech-leap-logo]{
 
 .carousel-course-card {
   /* background-color: hsla(215, 100%, 87%, 0.66); */
-  background-color: var(--clr-section-bg);
+  /* background-color: var(--clr-section-bg); */
   /* width: 800px; */
+  background-color: #ffffff;  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding-block: 12px;
-  padding-inline: 30px;
+  padding-inline: 50px;
   text-align: center;
   width: 100%;
-  max-width: 180px;
+  max-width: 160px;
   height: 130px;
   border-radius: 10px;
 }
@@ -430,7 +544,7 @@ img[data-tech-leap-logo]{
   background-color: hsla(215, 100%, 87%, 0.5);
   border-radius: 50%;
   overflow: hidden;
-  padding: 8px;
+  padding: 15px;
 }
 
 @media(max-width: 30em) {
@@ -516,6 +630,10 @@ img[data-tech-leap-logo]{
   /* background-color: red; */
 }
 
+.sub-text-button-container p {
+  padding-block: 1px;
+}
+
 
 @media (max-width: 50em){
   .sub-text-button-container {
@@ -527,6 +645,22 @@ img[data-tech-leap-logo]{
   }
 }
 
+.play-video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.play-video-section button{
+  margin-bottom: 60px;
+}
+
+@media (max-width: 50em){
+  .play-video-section {
+    align-items: center;
+  }
+}
+
 .play-video {
   position: relative;
   display: flex;
@@ -534,14 +668,14 @@ img[data-tech-leap-logo]{
   justify-content: center;
   border-radius: 20px;
   isolation: isolate;
-  /* color: hsl(215, 100%, 32%); */
-  /* background: linear-gradient(0deg, hsla(215, 100%, 32%, 0.54), hsla(215, 100%, 32%, 0.6)), url(../assets/images/Image\ 2.png); */
-  
   height: 480px;
   background-image: url(../assets/img/lady-with-pc.png);
   background-size:cover;
   background-repeat: no-repeat;
   background-position:center; 
+  /* color: hsl(215, 100%, 32%); */
+  /* background: linear-gradient(0deg, hsla(215, 100%, 32%, 0.54), hsla(215, 100%, 32%, 0.6)), url(../assets/images/Image\ 2.png); */
+  
   /* background-position: 100%; */
   /* width: 1096px;
   max-width: 100%;
@@ -562,6 +696,13 @@ img[data-tech-leap-logo]{
   opacity: 0.92;
 }
 
+section[data-what-makes-us-different] {
+  background-color: var(--clr-secondary-100);
+  background-image: url(../assets/img/dark-bg-with-waves.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .value-carousel {
   /* display: flex;
   gap: 50px; */
@@ -569,6 +710,7 @@ img[data-tech-leap-logo]{
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   grid-gap: 50px;
   align-items: center;
+  padding-top: 50px;
 }
 
 @media(max-width: 40em) {
@@ -582,13 +724,23 @@ img[data-tech-leap-logo]{
 }
 
 .value-carousel-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: clamp(200px, 15vw, 100%);
   padding-inline: 20px;
   padding-block: 40px;
-  box-shadow: rgba(209, 208, 208, 0.388) -3px 1px 7px 1px;
+  /* box-shadow: rgba(209, 208, 208, 0.388) -3px 1px 7px 1px; */
   background-color: #ffffff;
   /* border: 1px solid red; */
   border-radius: 6px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.value-carousel-card * {
+  transition: 0.3s ease all;
 }
 
 .value-carousel-card:hover {
@@ -596,19 +748,67 @@ img[data-tech-leap-logo]{
   /* border: 1px solid green; */
 }
 
+.value-carousel-card:hover  p{
+  display: block;
+}
+
+.value-carousel-card:hover > .value-carousel-card-header{
+  flex-direction: row;
+  gap: 10px;
+  /* background-color: red; */
+}
+
+.value-carousel-card:hover > .value-carousel-card-header h4{
+  font-size: 12px;
+}
+
+.value-carousel-card:hover > .value-carousel-card-header img{
+  width: 20px;
+}
+
+.value-carousel-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .value-carousel-card img {
-  width: 30px;
+  width: 40px;
 }
 
 .value-carousel-card h4 {
   font-family: var(--ff-primary);
-  color: var(--clr-primary-200);
+  color: var(--clr-secondary-200);
   font-weight: var(--fw-primary-bold);
 }
 
+
 .value-carousel-card p {
+  display: none;
   font-size: var(--fs-xsm);
   max-width: 25ch;
+  transition: 0.3s ease all;
+}
+
+.value-carousel-card p:hover {
+  display: block;
+  /* margin-top: 30px; */
+  font-size: 10px;
+  max-width: 45ch;
+  text-align: justify;
+}
+
+[data-wrap] {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media(max-width: 50em) {
+  [data-wrap]  {
+    justify-content: center;
+  }
 }
 
 .section-5-img {
@@ -616,15 +816,25 @@ img[data-tech-leap-logo]{
   max-width: 100%;
 }
 
-.why-choose-us {
-  padding-top: 60px;
-}
-
 .check-list {
   display: flex;
   align-items: center;
   gap: 30px;
   margin-bottom: 30px;
+}
+
+@media(max-width: 40em) {
+  .check-list {
+    flex-direction: column;
+  }
+
+  .why-choose-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
 }
 
 .check-list img {
@@ -669,6 +879,12 @@ img[data-tech-leap-logo]{
   border-radius: 90px;
 }
 
+.fs-sm[data-newsletter] {
+  max-width: 45ch;
+  padding-block: 20px;
+}
+
+
 @media(max-width: 52.347em) {
   .control-flow {
     display: flex;
@@ -685,6 +901,15 @@ img[data-tech-leap-logo]{
     max-width: 100%;
     margin-bottom: 30px;
   }
+}
+
+.input-email {
+  border: none;
+  padding: 10px;
+  width: 300px;
+  font-family: var(--ff-secondary);
+  color: var(--clr-primary-400);
+  font-size: var(--fs-sm);
 }
 
 .undisplaced-group {
@@ -787,7 +1012,63 @@ img[data-tech-leap-logo]{
   }
 }
 
+.testimonial-carousel {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+}
 
+.testimonial-carousel-content {
+  padding-inline: 4em;
+  border-left: 1px solid var(--clr-secondary-400);
+  margin-top: 30px;
+}
+
+.testimonial-carousel-content p {
+  font-size: 16px; 
+  padding-bottom: 20px;
+  max-width: 65ch;
+ 
+}
+
+section[data-overlayed-blue-bg] {
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 20px; */
+  isolation: isolate;
+  height: 400px;
+  background-image: url("../assets/img/group-students.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:center; 
+
+/* 
+
+  position: relative;
+  width: 100%;
+  background: rgb(8,69,155); */
+  
+  /* background-image: url("../assets/img/group-students.png"),  linear-gradient(180deg, rgba(8,69,155,1) 0%, rgba(8,69,155,1) 100%); */
+  /* background-blend-mode: overlay; */
+  /* background: linear-gradient(to bottom right, #0043A2 0%, #5BA2D4 50%, #A0EAFA 100%), ; */
+  /* background-image: url(../assets/img/group-students.png); */
+  /* background-blend-mode: multiply; */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+section[data-overlayed-blue-bg]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* border-radius: 20px; */
+  background: linear-gradient(0deg, hsla(215, 100%, 32%, 1), hsla(215, 100%, 32%, 1));
+  z-index: -1;
+  opacity: 0.69;
+}
 /* 
 .text-1 {
   grid-area: accessible;
@@ -887,7 +1168,7 @@ the (.flow > :not(:first-child)) pseudo class has a strong specificity if you wa
   color: var(--clr-secondary-100);
 }
 .text-secondary-200 {
-  color: var(--clr-secondary-100);
+  color: var(--clr-secondary-200);
 }
 
 /* bg color class*/

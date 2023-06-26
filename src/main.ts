@@ -1,4 +1,21 @@
-import './style.css'
+import './style.css';
+// import Swiper JS
+import Swiper from 'swiper';
+// import Swiper styles
+import 'swiper/swiper-bundle.css';
+
+type CSSSelector = string;
+
+interface MyComponent {
+  selector: CSSSelector | HTMLElement;
+}
+
+const args: string = '';
+
+// const swiper = new Swiper(...);
+// const swiper = new Swiper(args, ...);
+
+// const swiper = new Swiper([...]);
 // gets the elements in the DOM and saves to a variable 
 // adding navToggle: ***HTMLElement | any*** this tells typescript what kind of element this is 
 // and you don't need to add the optional "?" to the defined variable 
@@ -22,3 +39,4 @@ navToggle.addEventListener('click', () => {
 // function closePopupAfterDelay(delay: number) {
 //   setTimeout(closePopup, delay);
 // }
+
