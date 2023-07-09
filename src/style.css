@@ -843,6 +843,7 @@ section[data-what-makes-us-different] {
 
 /* footer */
 .newsletter {
+  display: none;
   position: relative;
   border-radius: var(--size-600);
   background-color: hsla(180, 6%, 97%, 1);
