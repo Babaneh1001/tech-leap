@@ -162,6 +162,11 @@ ol[role='list'] {
   list-style: none;
 }
 
+html {
+  scroll-snap-type: y proximity;
+  scroll-padding: 100px;
+}
+
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -258,6 +263,7 @@ p[data-width="wide"]{
 }
 
 section {
+  scroll-snap-align: start;
   padding-block: var(--size-900);
   height: 100%;
 }
@@ -498,13 +504,15 @@ img[data-tech-leap-logo]{
 .nav-list a:hover,
 .nav-list a:focus {
   color: var(--clr-secondary-100);
-  box-shadow: 0 2px 0 0 currentcolor;
+  /* box-shadow: 0 2px 0 0 currentcolor; */
+  border-bottom: 2px solid currentcolor;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .nav-list.active-nav {
   color: var(--clr-secondary-100);
-  box-shadow: 0 2px 0 0 currentcolor;
+  /* box-shadow: 0 2px 0 0 currentcolor; */
+  border-bottom: 2px solid currentcolor;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -862,6 +870,7 @@ section[data-what-makes-us-different] {
 /* footer */
 
 footer {
+  scroll-snap-align: center;
   padding-block: 5em;
   background-color: var(--clr-footer-bg);
   font-family: var(--ff-secondary);
@@ -1557,12 +1566,25 @@ p.about-us-more {
   font-family: var(--ff-secondary);;
   font-size: var(--fs-300);
   /* font-style: normal; */
-  font-weight: var(--fw-primary-light);
+  font-weight: var(--fw-secondary-xlight);
   line-height: 126.3%; /* 1.263rem */
+  letter-spacing: 1px;
 
   &[data-text-width-limiter] {
     /* background-color: red; */
     max-width: 50%;
+  }
+}
+
+[data-dark-bg] {
+  background-color: var(--clr-footer-bg);
+
+  & h2 {
+    color: var(--clr-primary-white);
+  }
+
+  & p {
+    color: var(--clr-primary-white);
   }
 }
 
