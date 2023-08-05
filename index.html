@@ -30,11 +30,12 @@
           <!-- </div> -->
           <nav class="primary-navigation"  id="primary-navigation">
             <ul  role="list" class="nav-list ff-secondary fw-secondary-regular fs-nav">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">Mentors</a></li>
-              <li><a href="#">About</a></li>
-              <li><a id="sign-in" href="#">Sign in</a></li>
+              <li class="nav-list active-nav"><a href="#">Home</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="mentors.html">Mentors</a></li>
+              <li><a href="about.html">About</a></li>
+              <!-- add this attribute if you want the tab to be opened in a new tab targrt="_blank" -->
+              <li><a href="sign-in.html" id="sign-in">Sign in</a></li>
               <li><a href="">
                 <button class="button">Get Started</button>
               </a></li>
@@ -411,43 +412,97 @@
 
       <!-- secondary navigation -->
       <div class="container">
-        <div class="even-columns
-        even-columns secondary-navigation">
-          <div>
-            <img src="./assets/icons/tech-leap-coloref.png" alt="techleap-logo">
-            <p>Tech leap is a platform that helps people transition into the tech industry with the aim of providing them with the resources and support regardless of their background or prior experience.
-            </p>
-            <ul>
-              <li><a href=""><img src="" alt="facebook-icon"></a></li>
-              <li><a href=""><img src="" alt="twitter-icon"></a></li>
-              <li><a href=""><img src="" alt="linkedin-icon"></a></li>
-              <li><a href=""><img src="" alt="instagram-icon"></a></li>
-            </ul>
+        <div class="secondary-navigation footer">
+          <div class="footer-top">
+            <div class="ft-about">
+              <img src="./assets/icons/tech-leap-coloref.png" alt="techleap-logo">
+              <p>Tech leap is a platform that helps people transition into the tech industry with the aim of providing them with the resources and support regardless of their background or prior experience.
+              </p>
+            </div>
+            <div class="ft-guide">
+              <!-- our courses -->
+              <div class="nav-links">
+                <p>Our Courses</p>
+                <ul>
+                  <li>
+                    UI/UX Design
+                  </li>
+                  <li>
+                    Web Development
+                  </li>
+                  <li>
+                    Digital Marketing
+                  </li>
+                  <li>
+                    Cyber Security
+                  </li>
+                  <li>
+                    Product Management
+                  </li>
+                </ul>
+              </div>
+              <!-- our company -->
+              <div class="nav-links">
+                <p>About Us</p>
+                <ul>
+                  <li>
+                    Our Courses
+                  </li>
+                  <li>
+                    Our Instructors
+                  </li>
+                  <li>
+                    News & Blogs
+                  </li>
+                  <li>
+                    Careers
+                  </li>
+                </ul>
+              </div>
+              <!-- our contacts -->
+              <div class="nav-links">
+                <p>Our Contacts</p>
+                <ul>
+                  <li>
+                    Our Courses
+                  </li>
+                  <li>
+                    Our Instructors
+                  </li>
+                  <li>
+                    News & Blogs
+                  </li>
+                  <li>
+                    Careers
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="nav-links">
-            <div>
-              <p>Our Courses</p>
+          <div class="footer-bottom">
+            <div class="fb-newsletter">
+              <div class="control-flow"> 
+                <p class="join-comm-txt" data-light-blue>JOIN OUR COMMUNITY</p>
+                <!-- <div class="newsletter-txt-icon">
+                  <h2 class="text-secondary-100 fw-primary-semi-bold">Newsletters </h2>
+                  <img style="height: 30px; width: 30px;" src="./assets/icons/newsletter.png" alt="email-icon">
+                </div> -->
+                <!-- <p class="fs-sm" data-newsletter>Stay up to date with events and successes of techleap. We have built resources to help you learn about our tools and courses</p> -->
+                <form action="" class="subscriber-email-form">
+                  <input class="input-email" type="email" name="user-email" id="" placeholder="Email Address">
+                  <button class="button
+                  " data-play-btn="footer-btn">Subscribe</button>
+                </form>
+              </div>
+              <!-- <p>© 2020 Career Karma</p> -->
+              <p data-copyright ><span class="copyright">&copy;</span>Copyright<span class="copyright">&copy;</span>2023-TechLeap, Privacy policy | Terms and conditions</p>    
+            </div>
+            <div class="fb-social-icons">
               <ul>
-                <li>
-                  <img src="" alt="">
-                  <p></p>
-                </li>
-                <li>
-                  <img src="" alt="">
-                  <p></p>
-                </li>
-                <li>
-                  <img src="" alt="">
-                  <p></p>
-                </li>
-                <li>
-                  <img src="" alt="">
-                  <p></p>
-                </li>
-                <li>
-                  <img src="" alt="">
-                  <p></p>
-                </li>
+                <li class="push-right"><a href=""><img src="./assets/icons/facebook-icon.png" alt="facebook-icon"></a></li>
+                <li><a href=""><img src="./assets/icons/twitter-icon.png" alt="twitter-icon"></a></li>
+                <li><a href=""><img src="./assets/icons/linkedIn-icon.png" alt="linkedin-icon"></a></li>
+                <li><a href=""><img src="./assets/icons/instagram-icon.png" alt="instagram-icon"></a></li>
               </ul>
             </div>
           </div>
