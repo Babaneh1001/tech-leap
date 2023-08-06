@@ -263,7 +263,7 @@ p[data-width="wide"]{
 }
 
 section {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   padding-block: var(--size-900);
   height: 100%;
 }
@@ -1588,6 +1588,70 @@ p.about-us-more {
   }
 }
 
+.our-core-values {
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+  height: 300px;
+  animation: fadeIn 5s; 
+}
+
+@keyframes fadeIn {   0% { opacity: 0; }   100% { opacity: 1; } }
+
+.our-core-values::-webkit-scrollbar {
+  display: none;
+}
+
+li.li-core-values {
+  display: flex;
+  gap: 30px;
+  scroll-snap-align: start;
+  margin-bottom: 100px;
+}
+
+li.li-core-values > div {
+  & h3 {
+    color: var(--clr-secondary-100);
+    text-align: justify;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-300);
+    /* font-style: normal; */
+    font-weight: var(--fw-primary-semibold);
+    line-height: 157.8%; /* 2.367rem */
+    letter-spacing: 0.0225rem;
+  }
+
+  & p {
+    color: #8E8E8E;
+    text-align: justify;
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-100);
+    font-style: normal;
+    font-weight: var(--fw-primary-light);
+    line-height: 157.8%; /* 1.578rem */
+    letter-spacing: 0.015rem;
+  }
+}
+
+li.li-core-values::before {
+  content: '';
+  background-color: #001E49;
+  width: 2.5rem;
+  margin-top: 8px;
+  height: 0.9rem;
+  border-radius: 0;
+  display: block;
+  line-height: 2rem;
+  color: white;
+  text-align: center;
+  margin-right: 0.5rem;
+  margin-top: 10px;
+
+}
+
+
 
 
 
@@ -1647,7 +1711,7 @@ the (.flow > :not(:first-child)) pseudo class has a strong specificity if you wa
 
   .even-columns {
     grid-auto-flow: column;
-    grid-auto-columns: 2fr,1fr;
+    grid-auto-columns: 2fr 1fr;
   }
 }
 
