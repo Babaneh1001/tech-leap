@@ -1,5 +1,6 @@
 {
   "name": "tech-leap",
+  "homepage": "https://thetechleap.org/",
   "private": true,
   "version": "0.0.0",
   "type": "module",

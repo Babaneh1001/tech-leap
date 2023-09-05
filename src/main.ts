@@ -37,7 +37,7 @@ let slideNumber = 0;
 nextBtn.addEventListener('click', () => {
 
   // for each slide carousel if there is the active class remove it 
-  slides.forEach((slide, i) => {
+  slides.forEach((slide) => {
     slide.classList.remove('active');
     // slide[i].style.marginLeft = `-${100 * i}%`;
     // slide.style.backgroundColor = 'red';
@@ -67,7 +67,7 @@ nextBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', () => {
   
   // for each slide carousel if there is the active class remove it 
-  slides.forEach((slide, i) => {
+  slides.forEach((slide) => {
     slide.classList.remove('active');
     // slide[i].style.marginLeft = `-${100 * i}%`;
     // slide.style.backgroundColor = 'red';
@@ -98,7 +98,7 @@ let playSlider: any;
 
 let repeater = () => {
   playSlider = setInterval(function(){
-    slides.forEach((slide, i) => {
+    slides.forEach((slide) => {
       slide.classList.remove('active');
     });
     slideIndicators.forEach((slideIndicator) => {
