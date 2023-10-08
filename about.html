@@ -6,7 +6,14 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Leap</title>
+    <!-- I want to create a workaround because I can't access other pages after running npm run build -->
+    <!-- so I will comment out the actual css paths and put the build ones the css and the ts one -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- <script type="module" crossorigin src="/assets/index-1be90875.js"></script> -->
+    <!-- <link rel="stylesheet" href="/assets/index-bb7ae191.css"> -->
+
+
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,700,600,300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,17 +38,22 @@
           <ul  role="list" class="nav-list ff-secondary fw-secondary-regular fs-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="courses.html">Courses</a></li>
-            <li><a href="mentors.html">Mentors</a></li>
+
+            <!-- <li><a href="mentors.html">Mentors</a></li> -->
+
             <li class="nav-list active-nav"><a href="about.html">About</a></li>
             <!-- add this attribute if you want the tab to be opened in a new tab targrt="_blank" -->
             <li><a href="sign-in.html" id="sign-in">Sign in</a></li>
-            <li><a href="">
-              <button class="button">Get Started</button>
-            </a></li>
+            <li>
+              <a target="_blank" href="https://chat.whatsapp.com/IdRoRRdNFHdH1Swjr8zkv0">
+                <button class="button">Get Started</button>
+              </a>
+            </li>
           </ul>
-          
+          <a target="_blank" href="https://chat.whatsapp.com/IdRoRRdNFHdH1Swjr8zkv0">
+            <button class="button | display-sm-none display-md-inline-flex ">Get Started</button>
+          </a>
         </nav>
-        <button class="button | display-sm-none display-md-inline-flex ">Get Started</button>
       </div>
     </div>
   </header>
@@ -197,7 +209,9 @@
     <section data-join-us>
       <div class="join-us">
         <h2> Join us at TechLeap </h2>
-        <button class="button">Get Started</button>
+        <a target="_blank" href="https://chat.whatsapp.com/IdRoRRdNFHdH1Swjr8zkv0">
+          <button class="button">Get Started</button>
+        </a>
       </div>
     </section>
   </main>
@@ -278,7 +292,7 @@
             </div>
             <!-- our contacts -->
             <div class="nav-links">
-              <p>Our Contacts</p>
+              <p>Contact</p>
               <ul>
                 <li>
                   Our Courses
@@ -319,7 +333,7 @@
               <li class="push-right"><a href=""><img src="./assets/icons/facebook-icon.png" alt="facebook-icon"></a></li>
               <li><a href=""><img src="./assets/icons/twitter-icon.png" alt="twitter-icon"></a></li>
               <li><a href=""><img src="./assets/icons/linkedIn-icon.png" alt="linkedin-icon"></a></li>
-              <li><a href=""><img src="./assets/icons/instagram-icon.png" alt="instagram-icon"></a></li>
+              <li><a target="_blank" href="https://rb.gy/j2nfg"><img src="./assets/icons/instagram-icon.png" alt="instagram-icon"></a></li>
             </ul>
           </div>
         </div>

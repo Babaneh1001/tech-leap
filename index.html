@@ -3,10 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <!-- use this to change the icon to tech leap's -->
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link  rel="icon" type="image/svg+xml" href="./assets/icons/tech-icon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Leap</title>
+    <!-- I want to create a workaround because I can't access other pages after running npm run build -->
+    <!-- so I will comment out the actual css paths and put the build ones the css and the ts one -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- <script type="module" crossorigin src="/assets/index-1be90875.js"></script>
+    <link rel="stylesheet" href="/assets/index-bb7ae191.css"> -->
+
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,700,600,300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +30,7 @@
           for example the button (the controller) has an aria-controls = "primary-navigation", and the nav element (the controlled), is what is controlled by it -->
           <!-- aria-controls identifies the element(s) whose contents are controlled by the current element. In other words, its purpose is to indicate that an element controls another one. Examples include control buttons for a video, or a button that opens and closes a collapsible element. -->
           <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="visually-hidden">Menu</span>
-            <img style="width: 25px; color: red" src="./assets/icons/burger-menu-right-svgrepo-com.svg" alt="hanburger-icon-open" aria-hidden="true" class="icon-hamburger">
+            <img style="width: 25px;" src="./assets/icons/burger-menu-right-svgrepo-com.svg" alt="hamburger-icon-open" aria-hidden="true" class="icon-hamburger">
             <img src="hanburger-close" alt="hanburger-icon-close" aria-hidden="true" class="icon-close">
           </button>
           <!-- </div> -->
@@ -32,17 +38,22 @@
             <ul  role="list" class="nav-list ff-secondary fw-secondary-regular fs-nav">
               <li class="nav-list active-nav"><a href="#">Home</a></li>
               <li><a href="courses.html">Courses</a></li>
-              <li><a href="mentors.html">Mentors</a></li>
+
+              <!-- <li><a href="mentors.html">Mentors</a></li> -->
+
               <li><a href="about.html">About</a></li>
               <!-- add this attribute if you want the tab to be opened in a new tab targrt="_blank" -->
               <li><a href="sign-in.html" id="sign-in">Sign in</a></li>
-              <li><a href="">
-                <button class="button">Get Started</button>
-              </a></li>
+              <li>
+                <a target="_blank" href="https://chat.whatsapp.com/IdRoRRdNFHdH1Swjr8zkv0">
+                  <button class="button">Get Started</button>
+                </a>
+              </li>
             </ul>
-            
+            <a data-hide-on-mobile target="_blank" href="https://chat.whatsapp.com/IdRoRRdNFHdH1Swjr8zkv0">
+              <button class="button | display-sm-none display-md-inline-flex ">Get Started</button>
+            </a>
           </nav>
-          <button class="button | display-sm-none display-md-inline-flex ">Get Started</button>
         </div>
       </div>
     </header>
@@ -61,7 +72,9 @@
                 <p style="padding-bottom: 50px;" class="secondary-text-grey-paragraph">Get quality courses with us with the best price.  We have top mentors around the globe. </p>
                 <div class="button-stack">
                   <div>
-                    <button class="button">Get Started</button>
+                    <a target="_blank" href="https://chat.whatsapp.com/IdRoRRdNFHdH1Swjr8zkv0">
+                      <button class="button">Get Started</button>
+                    </a>
                   </div>
                   <div style="display: flex; align-items: center;gap: 10px;">
                     <button data-play-btn>
@@ -142,8 +155,10 @@
                 </h2> 
               </div>
               <div class="play-video-section">
-                <p style="color: var(--clr-secondary-100); padding-bottom: 5px;" class="secondary-text-grey-paragraph">Get quality courses with us with the best priWelcome to Tech Leap, your trusted companion on the journey to transition into the exciting world of technology. We understand that making a career shift can be daunting, but we're here to make it easier, faster, and more enjoyable.ce.  We have top mentors around the globe. </p>
-                <button class="button">Get Started</button>
+                <p style="color: var(--clr-secondary-100); padding-bottom: 5px;" class="secondary-text-grey-paragraph">Welcome to Tech Leap, your trusted companion on the journey to transition into the exciting world of technology. We understand that making a career shift can be daunting, but we're here to make it easier, faster, and more enjoyable.ce.  We have top mentors around the globe. </p>
+                <a target="_blank" href="https://chat.whatsapp.com/IdRoRRdNFHdH1Swjr8zkv0">
+                  <button class="button">Get Started</button>
+                </a>
               </div>
             <!-- </div> -->
             <div class="play-video">
@@ -236,7 +251,7 @@
               <h2 style="max-width: 24ch;" class="text-primary-200 fw-primary-semi-bold">
                 Choose your path to success with our flexible learning options
               </h2> 
-              <p style="max-width: 90%;" data-width="wide" class="secondary-text-grey-paragraph">At Tech Leap, our goal is to develop well-rounded tech professionals who are equipped with both the professional and technical skills that enable them to thrive in the most in-demand, high growth industries.</p>
+              <p  class="secondary-text-grey-paragraph">At Tech Leap, our goal is to develop well-rounded tech professionals who are equipped with both the professional and technical skills that enable them to thrive in the most in-demand, high growth industries.</p>
             </div>
             <div class="even-columns">
               <div data-wrap>
@@ -260,7 +275,9 @@
                     <img src="./assets/icons/check-circle-grey.png" alt="">
                     <p class="ff-secondary text-primary-400">Learn from experts in different fields</p>
                   </div>
-                  <button class="button">ENROLL NOW</button>
+                  <a _blank href="https://rb.gy/j2nfg">
+                    <button class="button">ENROLL NOW</button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -283,21 +300,20 @@
               <div class="wrapper-container">
                 <div class="wrapper">
                   <div class="testimonial-carousel-card testimonial-carousel-content active">
-                    <p class="secondary-text-grey-paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
+                    <p class="secondary-text-grey-paragraph">It was really a good decision of purchasing this course. Amazing! Wanna thank the instructor.</p>
                     <p>Elizabeth Adeyemo (Data analysis alumni)</p>
                     <!-- image of student -->
                   </div>
                   
                   <div class="testimonial-carousel-card testimonial-carousel-content">
-                    <p class="secondary-text-grey-paragraph">lets see how this pans out Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus incidunt quo, maxime sint vitae, aut recusandae sapiente numquam eos aliquam dignissimos cumque illum rem quidem quibusdam dolores expedita sed ex?
+                    <p class="secondary-text-grey-paragraph">I took a Product Marketing course with TechLeap and it provided the opportunity for me to connect with experienced professionals. The tutors were friendly, very intentional about what they do and responsive to questions which made learning fun and in turn created a condusive learning environment for me. The community is superb and I will recommend that anyone starting out in tech takes advantage of this opportunity.
                     </p>
-                    <p>test and trus</p>
+                    <p>Sarah Ocheni</p>
                     <!-- image of student -->
                   </div>
 
                   <div class="testimonial-carousel-card testimonial-carousel-content">
-                    <p class="secondary-text-grey-paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
-                    <p>El samule yemo (Data analysis alumni)</p>
+                    <p class="secondary-text-grey-paragraph">It is a good match for me and I'm learning so much.</p>
                     <!-- image of student -->
                   </div>
                 </div>
@@ -325,7 +341,9 @@
               </h1>
             </div>
             <div data-get-started-btn>
-              <button class="button">Get Started</button>
+              <a target="_blank" href="https://chat.whatsapp.com/IdRoRRdNFHdH1Swjr8zkv0">
+                <button class="button">Get Started</button>
+              </a>
             </div>
           </div>
         </div>
@@ -501,19 +519,10 @@
               </div>
               <!-- our contacts -->
               <div class="nav-links">
-                <p>Our Contacts</p>
+                <p>Contact</p>
                 <ul>
                   <li>
-                    Our Courses
-                  </li>
-                  <li>
-                    Our Instructors
-                  </li>
-                  <li>
-                    News & Blogs
-                  </li>
-                  <li>
-                    Careers
+                    <a target="_blank" style="text-decoration: none; color: white;" href="mailto:Techleapgroup@gmail.com">Techleapgroup</a>
                   </li>
                 </ul>
               </div>
@@ -539,10 +548,10 @@
             </div>
             <div class="fb-social-icons">
               <ul>
-                <li class="push-right"><a href=""><img src="./assets/icons/facebook-icon.png" alt="facebook-icon"></a></li>
-                <li><a href=""><img src="./assets/icons/twitter-icon.png" alt="twitter-icon"></a></li>
+                <li class="push-right"><a href="#"><img src="./assets/icons/facebook-icon.png" alt="facebook-icon"></a></li>
+                <li><a href="#"><img src="./assets/icons/twitter-icon.png" alt="twitter-icon"></a></li>
                 <li><a href=""><img src="./assets/icons/linkedIn-icon.png" alt="linkedin-icon"></a></li>
-                <li><a href=""><img src="./assets/icons/instagram-icon.png" alt="instagram-icon"></a></li>
+                <li><a target="_blank" href="https://rb.gy/j2nfg"><img src="./assets/icons/instagram-icon.png" alt="instagram-icon"></a></li>
               </ul>
             </div>
           </div>
@@ -550,6 +559,6 @@
       </div>
     </footer>
 
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="./src/main.ts"></script>
   </body>
 </html>
