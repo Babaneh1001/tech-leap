@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- use this to change the icon to tech leap's -->
+    <link  rel="icon" type="image/svg+xml" href="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAVdJREFUOE+t0r1LlWEUAPDfqbx9kRBENjUUUUuBi7iWf0FDqzeIJmkLaSoaGmppMggdxAK3PpaWuNZqQ0NLNAYaJDREIRTRiXN7BbtK3qQXnumc5/ecjzdmV75npIn2UOuebXzRBfYMHGoPxqdt3FfAq4uHWyN1OTOzB3kSEef/Bsf6YGaeRJ2nOIUv+Im72IlJLOEOjuPxH0BTxWm8iYhuLDOrtcIO4B1uYhgT+NAP8K1J3oXCj2AhIqYyc6YfYAoX8AOvcQVvUfD7zYAdVW5EfF6bT2buR3X1tWmrhb2VsxlwtCs3M9hqtX0BmXkMD3AQt/AID3EmjE0P6Vz+uK7cDRVkZvV7CSt4hus4gRthbC7J2zrta01/XQD7GrR+rtV6DTWDWl8NcxovfgNp0cL4aA+wVtQyrqK2sRvzWMR9PN8AbDW03vh/AM7NvRRSZ/zsv75e+b8ASuuVKbzvFPMAAAAASUVORK5CYII=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Leap</title>
+    <!-- I want to create a workaround because I can't access other pages after running npm run build -->
+    <!-- so I will comment out the actual css paths and put the build ones the css and the ts one -->
+    
+
+    <!-- <script type="module" crossorigin src="/assets/index-1be90875.js"></script>
+    <link rel="stylesheet" href="/assets/index-bb7ae191.css"> -->
+
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,700,600,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200;400;700;900&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-0f3b59c6.js"></script>
+    <link rel="stylesheet" href="/assets/index-5392d32d.css">
+  </head>
+  <body class="prevent-scroll">
+
+    <header class="primary-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- <div class="logo"> -->
+          <a href="#"><img data-tech-leap-logo src="/assets/techleap-logo-b-w-272c74ce.png" alt="tech-leap-logo"></a>
+          <!-- hamburger icon -->
+          <!-- the aria-controls is like a reference, it let's screen readers know what contents or block of elements the element that has that property (aria-controls) set it will refernece the id of the element we are controlling ,
+          for example the button (the controller) has an aria-controls = "primary-navigation", and the nav element (the controlled), is what is controlled by it -->
+          <!-- aria-controls identifies the element(s) whose contents are controlled by the current element. In other words, its purpose is to indicate that an element controls another one. Examples include control buttons for a video, or a button that opens and closes a collapsible element. -->
+          <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="visually-hidden">Menu</span>
+            <img style="width: 25px;" src="/assets/burger-menu-right-svgrepo-com-13154a47.svg" alt="hamburger-icon-open" aria-hidden="true" class="icon-hamburger">
+            <img src="hanburger-close" alt="hanburger-icon-close" aria-hidden="true" class="icon-close">
+          </button>
+          <!-- </div> -->
+          <nav class="primary-navigation"  id="primary-navigation">
+            <ul  role="list" class="nav-list ff-secondary fw-secondary-regular fs-nav">
+              <li class="nav-list active-nav"><a href="#">Home</a></li>
+              <li><a href="courses.html">Courses</a></li>
+
+              <!-- <li><a href="mentors.html">Mentors</a></li> -->
+
+              <li><a href="about.html">About</a></li>
+              <!-- add this attribute if you want the tab to be opened in a new tab targrt="_blank" -->
+              <li><a href="sign-in.html" id="sign-in">Sign in</a></li>
+              <li>
+                <a target="_blank" href="https://chat.whatsapp.com/IdRoRRdNFHdH1Swjr8zkv0">
+                  <button class="button">Get Started</button>
+                </a>
+              </li>
+            </ul>
+            <a data-hide-on-mobile target="_blank" href="https://chat.whatsapp.com/IdRoRRdNFHdH1Swjr8zkv0">
+              <button class="button | display-sm-none display-md-inline-flex ">Get Started</button>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="extra-height">
+      <section>
+        <div class="container extra-height">
+          <div class="even-columns">
+            <div class="flow">
+              <h1 style="line-height: 60px;font-weight: 600;
+              font-size: 48px; color: #00204D;">Find your perfect <br> course & 
+              <span class="gradient"> grow </span> <br>
+              <span class="gradient">your  skills</span>
+              </h1>
+              <div class="sub-text-button-container">
+                <p style="padding-bottom: 50px;" class="secondary-text-grey-paragraph">Get quality courses with us with the best price.  We have top mentors around the globe. </p>
+                <div class="button-stack">
+                  <div>
+                    <a target="_blank" href="https://chat.whatsapp.com/IdRoRRdNFHdH1Swjr8zkv0">
+                      <button class="button">Get Started</button>
+                    </a>
+                  </div>
+                  <div style="display: flex; align-items: center;gap: 10px;">
+                    <button data-play-btn>
+                      <img data-play-icon src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAl0lEQVR4nK3Trw3CYBAF8JdgkCgWIKyAbbgrG9AVWAHLGqh+9wimlgnwsAR4DK6CklA6AO/jkmd/yf0D/lZFPUF5cB2wtIazg/MMSwsBYPUF+hhPWKaZDvgnLSz2WHGqAl2feMJjh6IeiwAH6A7nBlUzEgEOuaA8zjOAuGqA8Sa2EA8Yt8oQW3GN8YKz+fGQck85+5nEegOoabUI3d8JZwAAAABJRU5ErkJggg==" alt="">
+                    </button>
+                    <p class="text-primary-200 fw-secondary-regular fs-sm">Play Video</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-1-img">
+              <img src="/assets/main-img-9fa0f677.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- this section spreads more to both ends of the page than the other sectionsO -->
+      <section data-our-courses>
+        <div class="container">
+          <div class="even-rows">
+            <div> 
+              <p class="sub-paragraph">Our Courses</p>
+              <h2 data-light-txt-drk-bg>
+                Learn any tech course, anytime, anywhere on our platform
+              </h2> 
+            </div>
+            <div class="carousel-course-group">
+              <!-- <img src="./assets/icons/left-arrow-circle-light-blue.png" alt="previous-course-selector"> -->
+              <div class="carousel-courses">
+                <div class="carousel-course-card">
+                  <div class="circle">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAaCAYAAADSbo4CAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKDSURBVHgBzVfbdeIwEL0j+3/ZDpwKlu3AQAqggSRQAdsB0MFSgSFpgP3ehLgEUgEuIQUgKyMZguUXwuEj9xwnsiVdXY3mIQhtEEYdCH8CQhdQnc/vhC32coF4nOBCkEUOdM6ShFEAz3vlVlAzIoGUv5nnvYGjtJYwfwerCZPvzDN43KH/NK0lEeJPgwiYvmxMNWrWItxGIZTZYQG0hlLlXRFCHIXofhLbrJ12QXQ8pgQKccVc3T8sfZey57OICSqhhrmDqwbRFi93PdMePPFmVHjoCXjuCK4Q3oPAdwCpn2wR/GP1w4ru5PA/qCVQKkD/cXR466AZSS2forXA5n7JrUWhZ4WX+xs2/RJNINJHEJkHqts4VjGX5qxaizWcvEA7beqxx8sEz+MYt+zNSs0KkxbsnNqJXxsXlfIGvhjx4tOCmBk2d/PSWkCNO2a5YmeTyDE246VpDyI+Sn9atgLFoP38SI5+NAJ5UUFkj/NHXFyyWoiO7/xZ5kVcirKYmI+oVxxWjprM+YKTCDVvLULDzLX8IuRQH54XQvSQE5EgTZf4KmQ6s5OjmjQL0b5xSkrcy9m1RQErQdcdAdsqWb2pEeL5tvPt5QrXwr5gWeEN64WoNMy9vfNOtrgWtGXzx0N2xGVRE3JceyYcQ2uyriUKc64na3wFDvxUmTOKEHy/+N/SOo78ovHucETKWbItHPkFp+xfnx8yU43NcypSGgHawpHftyZpZzJFEPp+wfmEq2vG8APXQAP/97iPMNgi1nWwy3XmUFnPlHVnuPGzj6i33LvOduHhyWU+a8xlcOQXnPH+mppSB90neUxbOPIfExrHug6znIdrk+rdaKKm3ygucOD/AEJcMIVjRIKgAAAAAElFTkSuQmCC" alt="uiux-course-icon">
+                  </div>
+                  <h3>UI/UX Design</h3>
+                </div>
+                <div class="carousel-course-card">
+                  <div class="circle">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAhCAYAAAC1ONkWAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKhSURBVHgB1ZjfYdMwEMY/KXknTIA7QZMNHArPtANA6g1gEmCCNDAA5RnSeIN6A8IG6XsscSclzsl2ggvOn34PiRXJ9i+nu9NJCmXF4xi606erc9dWiLAXqQWsXQD2N4xJkSZp0CuAInS6YxoY4ziaI8+HBDhHAeagOjO6inBcLaAJ7keSebCLL9/o8zIcozI3cO+qzBBbbqDwinzKOmutB2bIzdXapHuXn62PkIax+KBhdBwMPCQUi9+V54kPhELnmugiOeygUMVbE4pQfC/ayvY1tHqGk5Pqaf7AKUiR0wtpnKi6pXZMqcPiBHSyFnsiU6ko2xv7GceQwhuIJBuCcZK7e3eDY+jlJCLDbAF7jOJxj8qjS5i8mpR39TXUv/mYX9/uyfxj+v6F1+N+ALXpm7mxBwGrK5FMNxIjItHn/4AE3wtYHZS1tAgv06KdJlQu2Ym4qwdD9zwSrjlYTA+uFJNUIhkzcIuw1HR0XQN3j4vJCA3VDKy2wnV127ACFcKVUo+6cXuK1sC6Dihc7H3dtrvCzc2nUp2F1UanJbAlMudLUn+LuLWVlahe+Bkmv0VrYGwZ9iWevo22R9y2IDFm2DSvNXd+hmOfgkrFrz7iOHdtoHr/C7UCs813Qgw3fTusRFynG4t2hPrIne96dKnEJzBjH0Rvs2pWRpzPY5mAzzZTTtbdFbkBSVDizzUtHeImFQXTshvuPe1unuNudFaxxnQ0oL4zZ90mUF7CV+1DdV/Jpc9yech9ZW+1r7wufrNIVjvxr7OaHXHqv9aHHy2LD2s4lVgbQeZIdg2aBV/25MsEWnPOicSt8WqkPHppV9aW25yWrvjSpwueNg5noFHy248oUHxKcYFTtQX7nDs2UC9KFmxfPG2KsoIyt/gZno/9AQ8iPycNdYTfAAAAAElFTkSuQmCC" alt="web-dev-course-icon">
+                  </div>
+                  <h3>Web Development</h3>
+                </div>
+                <div class="carousel-course-card">
+                  <div class="circle">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAiCAYAAADcbsCGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALVSURBVHgB7VjbddpAEL27qwKcDkQHlCDs/Mf+zokFFRgqwOkgqQCwCwj+t4k6MB1YriDkNwftZkbLQzJaHWEk7A/fc2Sz0u7qMjN7Zwbg2AhGPl0nVaYKHAunN10IEQImWN2ZIkkGiHqxa4mHo5DCkD75RCz75BxKsQU7rqXNWI7dJr0rCNOnUbkLjfIx+/pc9Kgey9kY8iFVQK77Yl1nCoiYBZnjjmwSbu7pfy36W5FcMAroJSFtEqzu+NgLDlISP5HoH2BLKhVW2cnLkKJF3q9MwNYAERGxO2g9xqy32LynIrwtMfVIxHwcjphibUL+inDfi3AALDmPgtdkiLEbIKb04bnaNoIIJQskiEgaFqgJlpzWfQrkNbGYxp0y/WkMn2+H9H7igjHuLweSXNomYts4EHLwJsSYhzHX4ANj0OexJNvlA9TIR7wFvB09PJHQJILvFBLvGB/kXosPcpWwpMySx0KSxuUV3VYJxwdrqzDfSWjnJMKstXOxyqt/MtNoElWp2vxNR5y0i0SZi8hsLhZyjmQZ86YoA5fpSj1txknC2Sgqmmpz1tmEShlx5diOcmbSyuVMW92OHPNjuiJaMyl86R7kbMwl+hpc0xeDlbudv1VavfCzLhH4jbObp/SLMKFXwCZ+a5WLTRNitE///cq7pBWuOCkkyhZWKsbp7Rh6OcEeyJ/W2eUYD986kLqH6ogxCz+lrkdyQUwntuR6SZKSOltTeaOqG9fXfdlDw9fUNjjqnIgOX3jALwgJ5wFqRuc4TNgLs7BF5U8vrRELQQVtSXHavAhnSXJPsQU11cvS8Gm+qV6DSQLjfZYUW26JvKmVt1MI4ghwWS7OjfjnhGDE95i0bxtnx9waUWy5NEgz8WFMO20dWdlZDrKNtsFe2nU4OQYHq/OUrUGaZmOpEbjJsW5xi8gEdjhxRqAK4iHsokFU+5WJc6O3cqU9LHGdzbML/wENehc0gCMj9AAAAABJRU5ErkJggg==" alt="digital-marketing-course-icon">
+                  </div>
+                  <h3>Digital Marketing</h3>
+                </div>
+                <div class="carousel-course-card">
+                  <div class="circle">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAkCAYAAACaJFpUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAF6SURBVHgB7ZdNTsMwEIWf7ewxO3YtJyCcgFJgjViyIydAnAD1BIgTtBUHgO6QWDQ3oJwAc4OyxzbjpD9GXU1JYOMnRYqnlb/M5EV6FliqN9SQ6gpCHAE+RzMyEJjhy96jLEwoiAWsiyx7hG8MtAmW9gIvxawGnjxMqase2tUc1u4LnA578Gq6KntvqPESwn/C05+2lujQHjQxkUd7DzI45IvB1nLueDnvRhRPTyCXgNTRz6ZRWJBzH+uF2JH4YyVgAiZgAiZgAibgPwAzcLXMr/Ca4sOIG0l4HYb8qtQrhaE7Csy31f3ZkJVleUCVhc27UUXDqmswxAN6rzdqAizxgM4+1UF59QAhTQ/AEA9YFvMqKHsUdN3Q/SHXNHyX1oARthR16OLzg65s36Sk7MTLjJAzGs8aGKzeH4/JDQa/kyZDHfw8lfm32mP98Tt9V120LTqu1aapjBC5rw15W4T3r6qFmczROZ9Ait2FcffQjAxdJXV2iWnxHArfRkN/Ht/hL/8AAAAASUVORK5CYII=" alt="product-management-course-icon">
+                  </div>
+                  <h3>Product Management</h3>
+                </div>
+                <div class="carousel-course-card">
+                  <div class="circle">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAlCAYAAAAjt+tHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALRSURBVHgB7VjdtdowDJZsBmCDphOUbgCEd+gA/E0AnaAwQe+dIIS7ALwDNxuUDZpu0AGIXdkJxCYJhL/eF75z4MSRYn2WFFsKwjWoew6wSh8QaoAyhF20hGAYwBXA0pp1rwqMDwCxDSDrORoh/QKIolcis4WSwBJGO2S0X2C0YFbcgpCvIKKAyIQnVQsM16HC2yBhQKMq3IaA5vGJzILI/C0moFdbGVFMxyeNqtWBWILEH8bdBQmqJbw0oxBNTa+wxHgNOP9Nxie5xqUk5uRSjBqw6n6FVX9iy2EJ626DJv9M10MiU5QDA22n+XYgjzqjOX+naydrFBfAIh9WORnuzqVBYAib3syS63nZmGRt8pqTeT6ixdCbU6Ekq9vGkWImKWYiN2alEbt5rH8tyinJBjR3/yDnXHmBCEiKGyapIOmd3vQacG/EHgyg5YdG7tTUHwPGPh0UEUN4JIQ1fzUm8MF4EngSeBJ4EmC05/9Jh/LWs/8MpAMZAqhLqQTo6LrgUUD8kg7kNibARGCoKOM1eBSkWbBgQmAH2/jsTxAfk/dHc64KWsO7uIwJxGe+b6jWdU14byCkC1PH/rq7iAkoCPFiKXPu3TUXWroEcww20/1VTEBXL1TzpXCoKr5PKNy3Dq14chjHRc/MJqAQiYkWHhSplDKKx6ug6kKQnnVPiG/mMCWgckEJzYRUVfK1JNJiNw2llNPjrsneCbVQfLfuXUNCJTHnv8CKO4V4c1TOQ95WvBnOyOg0Q8Kdl0tM1x9lVg5UZa/74zz14t6wOR+T9OfR3TCp58NMX6BaL/X2AHTsR7TxQZGZ082p61EGM8/eQNScOEm6qD1moPaPbHMzzXN7eQIK+lsAe8/tboqgE5lySYXzDMp/H3B92qxwdF6ROqtoNzzXll9OQEG1WEKHxMnI1KoZ7XCr3sslU15GYA+VoCBHBpFM2/1/oPLjxjPjHywgIj7u3c0dAAAAAElFTkSuQmCC" alt="cyber-security-course-icon">
+                  </div>
+                  <h3>Cyber Security</h3>
+                </div>
+              </div>
+              <!-- <img src="./assets/icons/left-arrow-circle-light-blue.png" alt="previous-course-selector"> -->
+            </div>
+            <!-- transitions as the course is toggled -->
+            <div class="indicator"></div>
+          </div>
+        </div>
+      </section>
+
+      <section data-add-vh-max class="bg-section-transparent">
+        <div class="container">
+          <div class="even-rows">
+            <!-- <div class="even-columns"  style="margin-bottom: var(--size-900);"> -->
+              <div> 
+                <p class="sub-paragraph" data-darker>How to learn with us</p>
+                <h2 class="text-primary-200 fw-primary-semi-bold">
+                  Choose your path to success with our flexible learning options
+                </h2> 
+              </div>
+              <div class="play-video-section">
+                <p style="color: var(--clr-secondary-100); padding-bottom: 5px;" class="secondary-text-grey-paragraph">Welcome to Tech Leap, your trusted companion on the journey to transition into the exciting world of technology. We understand that making a career shift can be daunting, but we're here to make it easier, faster, and more enjoyable.ce.  We have top mentors around the globe. </p>
+                <a target="_blank" href="https://chat.whatsapp.com/IdRoRRdNFHdH1Swjr8zkv0">
+                  <button class="button">Get Started</button>
+                </a>
+              </div>
+            <!-- </div> -->
+            <div class="play-video">
+              <button style="    padding-right: 20px;" data-play-btn-inverse>
+                <img data-play-btn-icon src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAeElEQVR4nK3TsRFBURCG0TcjEYo0YLSggdcCLWhBqg0tSFUgf5ogl8he4BhjbiD0r1PAN7P37nbdv2CGvhJY+zhjlQQ2vp2wqATeRhwwTwPNA3tM00BzwxaTNNAMWFYClzRwTUe4Y5c84ph+4xPHXxepvMq1Y0q9AIPfm2rh+KrvAAAAAElFTkSuQmCC" alt="play-icon">
+              </button>
+              <p style="color: var(--clr-primary-300);" class="text-primary-200 fw-secondary-regular fs-sm">Play Video</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="displaced-text">
+          <div class="undisplaced-group">
+            <h2 class="text-1">Accessible</h2>
+            <h2 class="text-2">Practical</h2>
+            <h2 class="text-3">Flexible</h2>
+          </div>
+          <div class="displaced-group">
+            <h2 class="text-4">Trustworthy</h2>
+            <h2 class="text-5">Innovative</h2>
+            <h2 class="text-6">Practical</h2>
+          </div>
+        </div>
+
+      </section>
+
+   
+      <!-- value-carousel -->
+      <section data-what-makes-us-different>
+        <div class="container">
+          <div class="even-rows">
+            <div>
+              <h2 data-light-txt-drk-bg>
+                What makes us different?
+              </h2> 
+              <p style="max-width: 
+              36ch;" class="sub-paragraph">Get quality courses with us with the best price. We have top mentors around the globe.</p>
+            </div>
+            <div class="value-carousel">
+              <div class="value-carousel-card">
+                <div class="value-carousel-card-header">
+                  <img src="/assets/check-circle-blue-26c654f0.png" alt="">
+                
+                  <h4>Trusted  content</h4>
+                </div>
+                <p>Our platform is built on the foundation of reliable and up-to-date content. We collaborate with industry experts and experienced professionals to deliver trusted information that reflects the latest trends and advancements in the tech field. You can rely on us to provide you with accurate and relevant knowledge.
+                </p>
+              </div>
+              <div class="value-carousel-card">
+                <div class="value-carousel-card-header">
+                  <img src="/assets/check-circle-blue-26c654f0.png" alt="">
+                
+                  <h4>Flexible courses</h4>
+                </div>
+                <p>
+                  We understand that everyone has different schedules and commitments. That's why we offer flexible courses that fit seamlessly into your lifestyle. Our self-paced learning modules allow you to study at your own convenience, whether you prefer to dive in intensively or take it one step at a time. We're here to adapt to your needs.
+                </p>
+              </div>
+              <div class="value-carousel-card">
+                <div class="value-carousel-card-header">
+                  <img src="/assets/check-circle-blue-26c654f0.png" alt="">
+                
+                  <h4>Learn with experts</h4>
+                </div>
+                <p>
+                  Our platform connects you with industry experts who are passionate about supporting your journey. You'll have access to mentors, participate in engaging discussions, and collaborate on projects, creating opportunities for growth and networking.
+                </p>
+              </div>
+              <div class="value-carousel-card">
+                <div class="value-carousel-card-header">
+                  <img src="/assets/check-circle-blue-26c654f0.png" alt="">
+                
+                  <h4>Get certified</h4>
+                </div>
+                <p>
+                  We believe in recognizing your achievements. Upon completing our courses, you'll have the opportunity to earn industry-recognized certifications. These certifications not only validate your newly acquired skills but also serve as a valuable asset when pursuing new job opportunities. Gain the confidence and credibility you need to succeed in the tech industry.
+                </p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="even-rows">
+            <div> 
+              <p class="sub-paragraph" data-darker>Why choose us</p>
+              <h2 style="max-width: 24ch;" class="text-primary-200 fw-primary-semi-bold">
+                Choose your path to success with our flexible learning options
+              </h2> 
+              <p  class="secondary-text-grey-paragraph">At Tech Leap, our goal is to develop well-rounded tech professionals who are equipped with both the professional and technical skills that enable them to thrive in the most in-demand, high growth industries.</p>
+            </div>
+            <div class="even-columns">
+              <div data-wrap>
+                <div class="section-5-img">
+                  <img  src="/assets/img-female-testimonial-beb8ffc3.png" alt="">
+                </div>
+                <div class="why-choose-us">
+                  <div class="check-list">
+                    <img src="data:image/png;base64,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" alt="">
+                    <p class="ff-secondary text-primary-400">Best  instructors  &  courses</p>
+                  </div>
+                  <div class="check-list">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAiJSURBVHgB7Z1dbtNKGIa//lAqISBnBcddAWUFuCsAVkB6j1RSfiSuCFdIQGkrcU+7AsoKjlkBZQXHrODkSEhQSsv53vSzTnDs+bHHHtvJI0Vpk0nsvO/MNz+eGRPNmTNnzpxZZYEazMuXL9eXlpbW+c8b/OgtLCzg797EI02Mx69fv0by/PH8/Dx+8uTJMTWURhnw6tWrcHl5+RYLF/K/idiuiMSQ6PHjxxE1BO8GQPTFxcXbnLv75FZwFSgd0dnZ2b7v0uHFgOFw2Lt69WqfRb/N/4bkl2M2Y//hw4cH5IFaDYDw169f3+If/IDqy+2mxCcnJxtPnz6NqUaWqSbevHmzxU9DFr9pwicEly9ffsfPG1QjlZcAxHhuyezSRaXaeFZWVoL79+9/oZqorARIuHkm4aY1fPv2bY2f2m0A2u/cnHzP4gdUDrTn0Ur5zN+FynJ0enp6vLq6OhoMBqPJhLu7uz1+L+CKvcetqnV+Duii/xCSBXzeMZXkxYsXSTgbN6X5vI9+/PgxyKpfnIegJNZT8Uo25scHbiIesRjHaaGLIGHwDv+JVleQl45NO+DjbVIJJPP9RdO/f8SV/M20CU5LAOdChJwh2QORDyF6FZ0k+U48HogZff77XioZ3n9OJVCID3pZlbyzEsDiv2Px+2THCG1wDhl7LnK6DXy+ARs+DlXcOz4ua7xG/ITR9vb2H5MvODGggPjehK8CQ/HHsAG/aV46BBUQP+Jct8knElMHsBGf+ZB+oZQBluIj1z/nLv8edQRL8Uec8aaa5IUNkAq3b5g85oNvdCXXgwLib3C4jdNvLFIB0NQ0be3wgY/4cTPr4G2loPiZo67WlbB0Mj4ZHnyfc32resI6XIoPrEsAi290cMT7ufhq8YGVAYj7pOhJJkhlO6QOUYX4wDgESej5W/uFHPP5wHepQ1QlPjAuARJ6dMT8KDWW0jSqFB8YGbCzs9MnfehJDt76nm1C1eIDIwP4i5/p0iDuz5uaduIDbUfMJPdjGJdbPLPcwy0kPtCWAJPcTyWHcZtEneIDpQEmub9Loadu8YHSAD7AFqmJeUj5gDqAD/HBouqESDOTgXP/YRdyvy/xQa4BfNlOl/upC7nfp/gg1wA+UEgK5AJ2TC3Gt/hgMe/ESFP5/vz585BaTBPEB5kGcPgJSU3cpCnetjRFfJBpgMxazoXfj6ilNEl8kFcHKFs/bQ0/TRMfTA1Hy0l+Un0oPbWiDTRRfDA1FsRNy0DzmYgck5pLSTKX8rmrufo+xJdRhFvy78e8BSBTBshCOBWfySEiPsQJJs6hz6+F/F7pBRN1i49Z4deuXcPxJnXsYyJD1nB9Vh1wgxRw7ozJISsrK3mXOcfGwCAqiI+cjyn5lF2Hrp+fnz9IvzhlAKZ3kwLMoySH8PHuKN4ubIKvmM8ZNPf3ZI2tZZWAgBTwjxpRvVib4LnCDRTvTZ3PokmiSS5duvQPucXkhxubgDRYHEINa+3kYW2A6/VT3KcY0MX6AB1aE7IqdAXexQeFpia6BAul2QQsWihlQhvFB94NAGVNaKv4oBEGgKImtFl8kGWAUoC3b9/+SRVRxIQmiY9lT5okU7/L2oCqsTWBGpTzT09PdS0vIwNiUvD9+/ebVDGWJuioLezoOrGUoW2WAV80BwmoBhyZUGvMxwJxTZJ/pz6TfkE31lOXAaCkCbVXuDptsNo//Zp1CKL/h1hroaAJvlo7uoFMvQFcjCJSs459GahGLE3wIr5oEqrS8LX2OP3alAEy1UT5Q1kMXaxzjqEJ3tr5BpqMss4rryOm/AGy8UXtaEzw2sniyHFPkyTzvDIN4Fj1gdToDlYZMAHLXun3S6OR7x6ubiJbnqaZF9dNLsyfnZ1ttHlukEtkBxblEi5ZK20WgmQrx5gUGBS5mcFAizivdOYOxmHmMynApcS6W0NNBIOBsuepityQnmsAdpglNb2si8yzxurqqjYSsEF7ue8pPoc9IRDXQkUStDzWurQy0gbDofBoe3t7I+9N5fUAXRiiGS8FnPsxyyFQpdGGctLApQAX4ZWx/uTkZK3uHWd9Y7hzQMy5f02VQHtFDFuL6dLItMKZwuQ3YwGjLo3WAOzrRvoBunBnZ2dmQpFszRlqksUmG4JrDUAFa+Ik1hPLyppOI5MB9nTpTDQDxtPMDVpEIJYeXydbRRYTALSxP8F4VgQPPZg4GrDz76mjSNwPdOkwLkWGGBsg4z7aCpku6oPOVcrYIZIM9qG23TnAeqULhyIM0mljPeeCIZ9IJ/aQsNiS2Tj0JFhPzGJhsRuWNsbjhLtQEmRv1KFB0pFN6EmwLgEAy2/4YKbiRtxR22xbR01WuqA+C03Ss0mbRe5DU2hqIg5k2sxiwrIrXeoGzWkWH6E2NEkvmxQeUAEKzw2VXRFNKmUw7ra3obOGTpYs7ggMP7JfZofIQiFoktevXx9YXpxpZEiaWKkZWnzskCvdPpWgtAGggAkotgcul6IWZeLWWkOyo7T4wIkBgIsuuufaLW5SjO9o58OIkvc0c7YlszMDAMf4oeEec1OgRPC1hcOqL/TLrRO3ZBaD9SVV17sCOzUASBMV9w0rer14XCowjePr168R59RS40rI6VeuXFl3cL9KDEoOXN/y0LkBAAsV+GRtWhIqjmVOJW5lFeP2tDwuNZoMWRCZK9De0tISbmEVJLewklX/LkZoMRfpbhUbVFViQEKZkNQgKt2Cv1IDgOPSUCeYbTeofbuaqpC6IW9fiCYRl+nZ2lKbAQkNNsLLrbVqNyBBjEDnLSS/RFyx7z969OiIPODNgASpI1DJKe/z6BiEmfGtE2fyluZ5YBQSOzbKpoFoPrqae4rwEvHzR+51HzVpHKpRBqSBIdKuhxl/Svu+J48glTxOnmWhIVZ7xix4NGuTxubMmTNnTjv4D95ByfwDG8LfAAAAAElFTkSuQmCC" alt="">
+                    <p class="ff-secondary text-primary-400">100%  certified  courses</p>
+                  </div>
+                  <div class="check-list">
+                    <img src="data:image/png;base64,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" alt="">
+                    <p class="ff-secondary text-primary-400">Best  rewards  &  certifications</p>
+                  </div>
+                  <div class="check-list">
+                    <img src="data:image/png;base64,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" alt="">
+                    <p class="ff-secondary text-primary-400">Learn from experts in different fields</p>
+                  </div>
+                  <a _blank href="https://rb.gy/j2nfg">
+                    <button class="button">ENROLL NOW</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="embedded-video"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- testimonials -->
+      <section style="height: 100%;" class="bg-section-transparent">
+        <div class="container">
+          <div class="even-rows">
+            <h2 class="fw-primary-semi-bold">
+              What our students say
+            </h2>
+
+            <div class="testimonial-carousel">
+              <img class="arrow prev-btn" style="width: 36px; cursor: pointer;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD90lEQVR4nM1az28VVRT+8FdQ5B+QhK1oFEzYNAV5nXOmUAR0xcpEQBJhJ1L2Ja5YoOLKFFrfnDOERY0miIn4IzFRWIJ1A5XquqB/RMk597VptY/3Y+6d975kknnz7px7vpl7z/3OuQPEwNTUU8h0F0hOg/UzkHwH0ltgmffDzu1a+O+0t7V7BorgNIG0AMu/IL0P0stgOQuWw8h01B0Nx6hfC/9d8bbhnsJt1Erm6NxzID0JlkWQ3gWVHyK/9lLPdqjYBpIzwYY8AMv72D39bBKf13R6EKx/gfQmsmJfNLtZsQ8sPzqRXA4gOkZntoLkaroO1j4gWQRr6X1Gwbi+Fl6xfoFGczNSo9HcDJJpsCyAylerGRtr7gHLQ7C+i7rB+p73bQGgb+dJHoF0HINCLgdA+k/vJGzYGPtBOr+WBOtS98MpTNgHAxk27cByzOdEY+5FdIRFG5uwwwbSyyCRJzdinfCnX0e06RUjc8/7GpQV+9uvsBaD2zYYAmTylj/gDVdskwck3yfrnOU8WC5UtkP6EzI9sf6iiSljRuWbSOa8LoejIgkux3xCrxOApghZ7lT3tJPzsUjIvBNZhclaU5W1OK/LIP24kl2SSZDOhh/2KlybF9tQi/PyaWXbuWx3lYDlTcB48w2Q3kM9zn8esY9FVwye4tkikdp5y8T8iUXrZwasH9jJJbB+lNj5L6OnjZmeA+knNoFvgPRIwmEjSXLerHwbLN9ax7f719ydnrx+hcYvzyAFctkLll9N//wBKnYmCJVfJ3PeYNUOWw8qETg69zRYv0kS67snUHEImbBqRyKG9uk4hGJM4kGQYHkHLNfjhdG6SWSrYdTqmbbIRECdJEhnw0IWpMT9aIbrIsErUiKFmEtNIpftXjVZlSYsTS+0xkRKEiSTroVWEcrkdxEb7UiQTlWyyzKPXBr/SSn1z6gV53YkqjpPRfb/lNJgiTLrD0iBFRJVnTeQ/OyFrg07CRW5CaRADEXKvsuz0H4jxOuQsuhFpGHD4ekXQPI3WPInN7TNBavPDxtIZ7340BFWQLXXZPX5YUGmJzxvH9ct3d1gpWwraafcTuoWrBPuy/7mjt5uNIltmwuDJMFebH6EvBzpz4Dv7+rSxmErMTIP60v9O7+CXF4Jc0Ku1BKdRqyMLjM+5rPy5ThGfWKrhj3i4iBSIS8Peai0aNP1hO0FtndgksM2pddpkYrgcqy1wi50jvNV4Su2Hm8RsY85zrq87a++OdmyYY4fS1rF2FAa2FvwBca2Y/17hxlP9azoZEm3JUt22LldC2ngbKvtQ2/vbzJiybE/LG9CfvV1UHHK89RQKPgNpL+3Dju/AdaLngZ6JhXH6ceMq6oWB9FyEwAAAABJRU5ErkJggg==" alt="left-arrow-pointer">
+
+              <div class="wrapper-container">
+                <div class="wrapper">
+                  <div class="testimonial-carousel-card testimonial-carousel-content active">
+                    <p class="secondary-text-grey-paragraph">It was really a good decision of purchasing this course. Amazing! Wanna thank the instructor.</p>
+                    <p>Elizabeth Adeyemo (Data analysis alumni)</p>
+                    <!-- image of student -->
+                  </div>
+                  
+                  <div class="testimonial-carousel-card testimonial-carousel-content">
+                    <p class="secondary-text-grey-paragraph">I took a Product Marketing course with TechLeap and it provided the opportunity for me to connect with experienced professionals. The tutors were friendly, very intentional about what they do and responsive to questions which made learning fun and in turn created a condusive learning environment for me. The community is superb and I will recommend that anyone starting out in tech takes advantage of this opportunity.
+                    </p>
+                    <p>Sarah Ocheni</p>
+                    <!-- image of student -->
+                  </div>
+
+                  <div class="testimonial-carousel-card testimonial-carousel-content">
+                    <p class="secondary-text-grey-paragraph">It is a good match for me and I'm learning so much.</p>
+                    <!-- image of student -->
+                  </div>
+                </div>
+              </div>
+
+              <img class="arrow next-btn" style="width: 36px; cursor: pointer; rotate: 180deg;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD90lEQVR4nM1az28VVRT+8FdQ5B+QhK1oFEzYNAV5nXOmUAR0xcpEQBJhJ1L2Ja5YoOLKFFrfnDOERY0miIn4IzFRWIJ1A5XquqB/RMk597VptY/3Y+6d975kknnz7px7vpl7z/3OuQPEwNTUU8h0F0hOg/UzkHwH0ltgmffDzu1a+O+0t7V7BorgNIG0AMu/IL0P0stgOQuWw8h01B0Nx6hfC/9d8bbhnsJt1Erm6NxzID0JlkWQ3gWVHyK/9lLPdqjYBpIzwYY8AMv72D39bBKf13R6EKx/gfQmsmJfNLtZsQ8sPzqRXA4gOkZntoLkaroO1j4gWQRr6X1Gwbi+Fl6xfoFGczNSo9HcDJJpsCyAylerGRtr7gHLQ7C+i7rB+p73bQGgb+dJHoF0HINCLgdA+k/vJGzYGPtBOr+WBOtS98MpTNgHAxk27cByzOdEY+5FdIRFG5uwwwbSyyCRJzdinfCnX0e06RUjc8/7GpQV+9uvsBaD2zYYAmTylj/gDVdskwck3yfrnOU8WC5UtkP6EzI9sf6iiSljRuWbSOa8LoejIgkux3xCrxOApghZ7lT3tJPzsUjIvBNZhclaU5W1OK/LIP24kl2SSZDOhh/2KlybF9tQi/PyaWXbuWx3lYDlTcB48w2Q3kM9zn8esY9FVwye4tkikdp5y8T8iUXrZwasH9jJJbB+lNj5L6OnjZmeA+knNoFvgPRIwmEjSXLerHwbLN9ax7f719ydnrx+hcYvzyAFctkLll9N//wBKnYmCJVfJ3PeYNUOWw8qETg69zRYv0kS67snUHEImbBqRyKG9uk4hGJM4kGQYHkHLNfjhdG6SWSrYdTqmbbIRECdJEhnw0IWpMT9aIbrIsErUiKFmEtNIpftXjVZlSYsTS+0xkRKEiSTroVWEcrkdxEb7UiQTlWyyzKPXBr/SSn1z6gV53YkqjpPRfb/lNJgiTLrD0iBFRJVnTeQ/OyFrg07CRW5CaRADEXKvsuz0H4jxOuQsuhFpGHD4ekXQPI3WPInN7TNBavPDxtIZ7340BFWQLXXZPX5YUGmJzxvH9ct3d1gpWwraafcTuoWrBPuy/7mjt5uNIltmwuDJMFebH6EvBzpz4Dv7+rSxmErMTIP60v9O7+CXF4Jc0Ku1BKdRqyMLjM+5rPy5ThGfWKrhj3i4iBSIS8Peai0aNP1hO0FtndgksM2pddpkYrgcqy1wi50jvNV4Su2Hm8RsY85zrq87a++OdmyYY4fS1rF2FAa2FvwBca2Y/17hxlP9azoZEm3JUt22LldC2ngbKvtQ2/vbzJiybE/LG9CfvV1UHHK89RQKPgNpL+3Dju/AdaLngZ6JhXH6ceMq6oWB9FyEwAAAABJRU5ErkJggg==" alt="right-arrow-pointer">
+            </div>
+            <!-- transitions as the course is toggled -->
+            <div class="testimonial-carousel-indicators">
+              <button class="slider-indicator testimonial-carousel-indicators-active"></button>
+              <button class="slider-indicator"></button>
+              <button class="slider-indicator"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- overlayed background section -->
+      <section data-overlayed-blue-bg>
+        <div class="container">
+          <div style="align-items: center; gap: 5px;" class="even-columns">
+            <div> 
+              <h1 data-h1-lg-blue class="fw-primary-semi-bold">
+                Learn any tech course, anytime, anywhere on our platform
+              </h1>
+            </div>
+            <div data-get-started-btn>
+              <a target="_blank" href="https://chat.whatsapp.com/IdRoRRdNFHdH1Swjr8zkv0">
+                <button class="button">Get Started</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ section -->
+      <section>
+        <div class="faq-container">
+          <h2 class="fw-primary-semi-bold">
+            Frequently asked questions
+          </h2>
+          <details>
+            <summary class="sub-paragraph title"> 
+              <span class="summary-title"> What is techleap? </span> 
+              <div class="arrow-down">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAZCAYAAAA4/K6pAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADeSURBVHgBpZTNEYIwEIXfxotHS6AFKxAHD3aBdGQHkD50wApsgRK8O0PMwgwaw08W3mmzM9/HhtkJ8Js430EY1VeJTqHU00oiCEI9DCra2pgaTXNEldVhglMew2xKpyuQKNyyyhLa1VJkr1OGXIf6KtGFPabSScg5LZCQ1xFKfIFQMiwQSMYFgZJpQYBkXjAt2atZmJfJ4OD1CQ87wYtmYd5I3kz38xr39NJ5VsDjgkB4WCCAfYEQdgUL4K9gIdwJVsAchS1r/v9lGNxNwDnbKd7tuxhJYDcsSfQVwnwA5kqbIchUF6sAAAAASUVORK5CYII=" alt="">
+              </div>
+            </summary>
+            <div class="show-drop-down-content">
+              <p>
+                Tech leap is a platform that helps people transition into the tech industry with the aim of providing them with the resources and support regardless of their background or prior experience.
+              </p>
+            </div>
+          </details>
+          <hr>
+          <details>
+            <summary class="sub-paragraph title"> 
+              <span class="summary-title"> What do I need to start learning? </span> 
+              <div class="arrow-down">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAZCAYAAAA4/K6pAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADeSURBVHgBpZTNEYIwEIXfxotHS6AFKxAHD3aBdGQHkD50wApsgRK8O0PMwgwaw08W3mmzM9/HhtkJ8Js430EY1VeJTqHU00oiCEI9DCra2pgaTXNEldVhglMew2xKpyuQKNyyyhLa1VJkr1OGXIf6KtGFPabSScg5LZCQ1xFKfIFQMiwQSMYFgZJpQYBkXjAt2atZmJfJ4OD1CQ87wYtmYd5I3kz38xr39NJ5VsDjgkB4WCCAfYEQdgUL4K9gIdwJVsAchS1r/v9lGNxNwDnbKd7tuxhJYDcsSfQVwnwA5kqbIchUF6sAAAAASUVORK5CYII=" alt="">
+              </div>
+            </summary>
+            <div class="show-drop-down-content">
+              <p>
+                To start learning with us, all you need is a computer or laptop with internet access. We provide the necessary course materials and resources on our online platform, making it convenient for you to dive into the world of tech from anywhere.
+              </p>
+            </div>
+          </details>
+          <hr>
+          <details>
+            <summary class="sub-paragraph title"> 
+              <span class="summary-title"> How many courses can I take at a time? </span> 
+              <div class="arrow-down">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAZCAYAAAA4/K6pAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADeSURBVHgBpZTNEYIwEIXfxotHS6AFKxAHD3aBdGQHkD50wApsgRK8O0PMwgwaw08W3mmzM9/HhtkJ8Js430EY1VeJTqHU00oiCEI9DCra2pgaTXNEldVhglMew2xKpyuQKNyyyhLa1VJkr1OGXIf6KtGFPabSScg5LZCQ1xFKfIFQMiwQSMYFgZJpQYBkXjAt2atZmJfJ4OD1CQ87wYtmYd5I3kz38xr39NJ5VsDjgkB4WCCAfYEQdgUL4K9gIdwJVsAchS1r/v9lGNxNwDnbKd7tuxhJYDcsSfQVwnwA5kqbIchUF6sAAAAASUVORK5CYII=" alt="">
+              </div>
+            </summary>
+            <div class="show-drop-down-content">
+              <p>
+                We encourage you to focus on one course at a time to ensure a comprehensive learning experience. Each course is designed to cover specific skills and knowledge, allowing you to build a solid foundation step by step. Once you have successfully completed one course, you can move on to the next to expand your expertise.
+              </p>
+            </div>
+          </details>
+          <hr>
+          <details>
+            <summary class="sub-paragraph title"> 
+              <span class="summary-title"> How long do I need to get my certification? </span> 
+              <div class="arrow-down">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAZCAYAAAA4/K6pAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADeSURBVHgBpZTNEYIwEIXfxotHS6AFKxAHD3aBdGQHkD50wApsgRK8O0PMwgwaw08W3mmzM9/HhtkJ8Js430EY1VeJTqHU00oiCEI9DCra2pgaTXNEldVhglMew2xKpyuQKNyyyhLa1VJkr1OGXIf6KtGFPabSScg5LZCQ1xFKfIFQMiwQSMYFgZJpQYBkXjAt2atZmJfJ4OD1CQ87wYtmYd5I3kz38xr39NJ5VsDjgkB4WCCAfYEQdgUL4K9gIdwJVsAchS1r/v9lGNxNwDnbKd7tuxhJYDcsSfQVwnwA5kqbIchUF6sAAAAASUVORK5CYII=" alt="">
+              </div>
+            </summary>
+            <div class="show-drop-down-content">
+              <p>
+                The duration to obtain your certification varies depending on the course you choose and your learning pace. Our courses are designed to be flexible, allowing you to learn at your own speed. On average, most learners complete their certification within a few months, but you can take more or less time based on your preferences and availability.dless of their background or prior experience.
+              </p>
+            </div>
+          </details>
+          <hr>
+          <details>
+            <summary class="sub-paragraph title"> 
+              <span class="summary-title"> Are there physical learning centers? </span> 
+              <div class="arrow-down">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAZCAYAAAA4/K6pAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADeSURBVHgBpZTNEYIwEIXfxotHS6AFKxAHD3aBdGQHkD50wApsgRK8O0PMwgwaw08W3mmzM9/HhtkJ8Js430EY1VeJTqHU00oiCEI9DCra2pgaTXNEldVhglMew2xKpyuQKNyyyhLa1VJkr1OGXIf6KtGFPabSScg5LZCQ1xFKfIFQMiwQSMYFgZJpQYBkXjAt2atZmJfJ4OD1CQ87wYtmYd5I3kz38xr39NJ5VsDjgkB4WCCAfYEQdgUL4K9gIdwJVsAchS1r/v9lGNxNwDnbKd7tuxhJYDcsSfQVwnwA5kqbIchUF6sAAAAASUVORK5CYII=" alt="">
+              </div>
+            </summary>
+            <div class="show-drop-down-content">
+              <p>
+                Currently, we operate as an online learning platform, so we don't have physical learning centers. Our virtual environment offers a seamless and accessible learning experience, enabling you to study from the comfort of your own home or any location that suits you best.
+              </p>
+            </div>
+          </details>
+          <hr>
+          <details>
+            <summary class="sub-paragraph title"> 
+              <span class="summary-title"> Is there a mentorship program? </span> 
+              <div class="arrow-down">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAZCAYAAAA4/K6pAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADeSURBVHgBpZTNEYIwEIXfxotHS6AFKxAHD3aBdGQHkD50wApsgRK8O0PMwgwaw08W3mmzM9/HhtkJ8Js430EY1VeJTqHU00oiCEI9DCra2pgaTXNEldVhglMew2xKpyuQKNyyyhLa1VJkr1OGXIf6KtGFPabSScg5LZCQ1xFKfIFQMiwQSMYFgZJpQYBkXjAt2atZmJfJ4OD1CQ87wYtmYd5I3kz38xr39NJ5VsDjgkB4WCCAfYEQdgUL4K9gIdwJVsAchS1r/v9lGNxNwDnbKd7tuxhJYDcsSfQVwnwA5kqbIchUF6sAAAAASUVORK5CYII=" alt="">
+              </div>
+            </summary>
+            <div class="show-drop-down-content">
+              <p>
+                Yes, we offer a mentorship program to support your learning journey. We’ve partnered with industry professionals to help you navigate through challenges, provide career advice, and support your growth in the tech industry.
+              </p>
+            </div>
+          </details>
+          <hr>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="newsletter">
+          <div class="even-columns">
+            <!-- z-index to bring forward and maybe some positioning -->
+            <div class="control-flow"> 
+              <p class="join-comm-txt">JOIN OUR COMMUNITY</p>
+              <div class="newsletter-txt-icon">
+                <h2 class="text-secondary-100 fw-primary-semi-bold">Newsletters </h2>
+                <img style="height: 30px; width: 30px;" src="/assets/newsletter-91a0b9c2.png" alt="email-icon">
+              </div>
+              <p class="fs-sm" data-newsletter>Stay up to date with events and successes of techleap. We have built resources to help you learn about our tools and courses</p>
+              <form action="">
+                <input class="input-email" type="email" name="user-email" id="" placeholder="Email Address">
+                <button class="button
+                " data-subscribe-btn="darker-btn">Subscribe</button>
+              </form>
+            </div>
+            <div class="newsletter-students">
+              <img src="/assets/newsletter-img-84b5f59c.png" alt="collection-of-students">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- secondary navigation -->
+      <div class="container">
+        <div class="secondary-navigation footer">
+          <div class="footer-top">
+            <div class="ft-about">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAlCAYAAAD7u09NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVYSURBVHgB5VlNbttGFP5GctIfFIiyKZpV6BNEPkHpOvs4B2hMnsD2CWydIPYJSLUHiLIr0MSiThD5BKFXAbKpCrQo4IJi3xPfmEOKFElbKiTnAwbkzHwccr6ZefPeUKEh/M/Xf9ClU1I9dr5/uIMNRqsJ2ft07aBcDMTT6RU2HLUF8T7GHdXCyeLW4gE2HLUEmYnx3bUHBWshMUKADUelIN6nf2z17b9DxGq/guq7T74JseHY8j7P7MI8pujSEnlGdzZqII6i3lxZHPt0OUA9uEopH0sEvd+hiyfZbWo/rHpmS6UPZNHA3MZR3LsPs4Oxhbtj7D756rSkzqcUGHkb6Yw5pjQx6kwej65FF0uyYdno1uUZfN4lu/xu4o7z9XcUJA7jaPqyrJZeGCD7MXzRggyKPp44/LGvkVuqVM4f/1I/I0J4VbxcHbd7ZOSZs2tyG/khmcaBUfz3w51lLhXp5BBJJ3n29Cm9pRQiGdWhjDAMXh55noYDQwyBhZzJaD5DFCY0K3ruD1+fYfk4ReL4jWnUbjxeEeoDkg44lJ8gXSY3xpjKucOvpS6/K3LZY+JOZBa+kTLbJNUXZCYEjVgcna3QgD6Ta4c+epir6xgcJfehuTPR/ZkxM0Ig4zedsRjCGxOPZ9+co1kuCAswjf8EGzu2BX89GLjbaoLV4rFcQ0qjXJ3Os42o8omKUOvbtygYU1gfcGef8g2N4qkuNGwLYyI8Ns4W1dnaePM90lEf4xbIzpCfPAdo/1jjuQkuXh1j+WC79IKSTZ37iHQr5hmhlwKXhZQOkSyJodgU065wPQtioyGygqiWjTqeZTx74dIF4ZGmzrlIRtlCsjNocIePte9AvF0ks4Z5HaSChZBtV7b5RliGY9YEASVX7gvXtBhJX6a/JcVh3qcR32E7xxvnnK1F7xsgES+D/1UQ6YRfkxvclbfofSJchacak4p1TKwqPyRaBDGOtmQHehtcJ+Q91bof2IHt3UYUC4lnyKmLNUROkOrwOH2yfRtfYO2RXTLTaIx2G7WgZruRjxVCvE6HErsCfM8zmGObzHIzeOzFWppnerHE4S39EZL4KESym3alXS4L2ObMW4y9XxadqmcRRbsI3AA1ITuCdrB2FxlEwxmzCqpDeT6s4N3ERBLZstPH7sJhAZ/rdwqi3fgt6qLV8siWWFgNdCdn4Twl9jt4Cw2RjVI9pLPinBKf3PWlrktC5Jf2C7n2hR9Knts4mhdEtXzUhVIWiTJctig534I/Wi+PEKn3astS4fiHf3+c02w4YpefkiNlM16ueYvqt5kj/G2jzYN5Qd79HKDAYSmFFmXPW6aRtYx7ngFDIzlGXYc61JUyDus52vUo8VHBU+E8yrUdYB43/5OKHbOYpp0qOWstAouC9huyPwFa0TF+d28VWBkwt/+dXL4rCWJDzFOwK6TBn4ViW2gVlGnxJsWCXLzysdcnw6Oa+go2otY+6kWa+2IQ8+AOBXLlDvFu0JczDObrA6BQTvW1GD0dIcuSK4vJOELmwR7dfHO6rMblrntr6mLa/oDV4bCknOMWjlHYOOrRPyoI1Ngo6iiXhTshjilCgOJoV0fBTq6c2+mVn6nytI+xihC/Fvj0C8nOwrueXjJXkt8V48nlvANdSj0LM5LnLuX+Mtf0ROpHSAUdSZthdeTyvH9Kf+1OUBc8shcHp1gzGH6ITx13y3jVp+7vqHMq7uELQb3fEPdDlAESuzNaRKr/X4ZFQcTrNcQGQpwwp+r/cbMfVe/dAR5Q/IL4HPcUzf/c/eaGeH9wRMKQyxvryPHe4PZHiCyM3suf/2pjOiWHTNnYcPwHl5oeAud9sGAAAAAASUVORK5CYII=" alt="techleap-logo">
+              <p>Tech leap is a platform that helps people transition into the tech industry with the aim of providing them with the resources and support regardless of their background or prior experience.
+              </p>
+            </div>
+            <div class="ft-guide">
+              <!-- our courses -->
+              <div class="nav-links">
+                <p>Our Courses</p>
+                <ul>
+                  <li>
+                    UI/UX Design
+                  </li>
+                  <li>
+                    Data Analysis
+                  </li>
+                  <li>
+                    Business Analysis
+                  </li>
+                  <li>
+                    Excel
+                  </li>
+                  <li>
+                    Product Management
+                  </li>
+                  <li>
+                    Product Marketing Management
+                  </li>
+                  <li>
+                    Project Management
+                  </li>
+                  <li>
+                    Tech Sales
+                  </li>
+                </ul>
+              </div>
+              <!-- our company -->
+              <div class="nav-links">
+                <p>About Us</p>
+                <ul>
+                  <li>
+                    Our Courses
+                  </li>
+                  <li>
+                    Our Instructors
+                  </li>
+                  <li>
+                    News & Blogs
+                  </li>
+                  <li>
+                    Careers
+                  </li>
+                </ul>
+              </div>
+              <!-- our contacts -->
+              <div class="nav-links">
+                <p>Contact</p>
+                <ul>
+                  <li>
+                    <a target="_blank" style="text-decoration: none; color: white;" href="mailto:TechLeapgroup@gmail.com">Techleapgroup</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="fb-newsletter">
+              <div class="control-flow"> 
+                <p class="join-comm-txt" data-light-blue>SUBSCRIBE TO OUR NEWSLETTER</p>
+                <!-- <div class="newsletter-txt-icon">
+                  <h2 class="text-secondary-100 fw-primary-semi-bold">Newsletters </h2>
+                  <img style="height: 30px; width: 30px;" src="./assets/icons/newsletter.png" alt="email-icon">
+                </div> -->
+                <!-- <p class="fs-sm" data-newsletter>Stay up to date with events and successes of techleap. We have built resources to help you learn about our tools and courses</p> -->
+                <form action="" class="subscriber-email-form">
+                  <input class="input-email" type="email" name="user-email" id="" placeholder="Email Address">
+                  <button class="button
+                  " data-play-btn="footer-btn">Subscribe</button>
+                </form>
+              </div>
+              <!-- <p>© 2020 Career Karma</p> -->
+              <p data-copyright ><span class="copyright">&copy;</span>Copyright<span class="copyright">&copy;</span>2023-TechLeap, Privacy policy | Terms and conditions</p>    
+            </div>
+            <div class="fb-social-icons">
+              <ul>
+                <li class="push-right"><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALrSURBVHgBvZbPTxNBFMe/s11/xDamJ/VmISZIglZPGjChC1HjhVQ8YYzAXwAmRA4eWhIvGIzlZOLFGg96ARQOBqFQDyg3WyUiBEq9wa2JoIZIx/cGWkttt1MtfpLtzE5n5rsz8+a9J1CCkffSffgg/DDQKCR8VLoh6dkmJiWS9P5yE4heqRXJUvMJW6FD6BIC3TkCtkggvJlGn51wQcHJT9JvmHisK1RAONhcI/q0BCMLMkCNQfwjJPrC+IZO66xI5bYbeyHG0Dx+6cRIfntWMDIvOyolloWMLPJZPsj7EODVvPQcMDBNVY/OPPEPc4jFP2bfr7W2wOV0Fu2/lYZ1sVZEuW7yz34HuuhrPNCgfyCE8YkpOHcENjY24PXW4czpU0XHOBwIUBHlujG9It10v/zQYHwiosRu93RhbPgZ7gbuQAva2ol56eOqmf4BvzD0Vjc0PIqG+nO0mjq0tLZhnVani2mgnYqoSebrE5qDWKChuhrjr6fU6bffaFNba7edGUiHd7HTNBzw8psdq2triMfnsL6+e0XHjh6By+WCJu5pMk42Gk+pnk+ePlfnx/CKyN0p8f77g6rt0cMQTtDKNSBBTfflpXPr7elWq2Ia6s9jaGRUPZpiClO343JiBfcGBnH5UhNto5MMaAxLywn1IeVgUnj5Qlt03K4TWyYz83YW3tVtgaVEQq0y858WW0ixlcboSGwFL9DE/Fy/+du7sGfppftYDladiBlixwPsORJvuDCMAwjjP0BHF+bStKpEampRRtn96AyceTeLvyDZXCvCXFHh6SdwS2cUW+RXun/8eDW8SwZJaUemnvVqFA+D5FMDqDzJphpRlXnJBmBacpDko6gsSUGxMLdhV4oh9uEqicZQQTErL4MrGCgiizJEMbK8S5YLXQEa32EVSBeLRqbJBUoVAc5HPNBFIMUG0nxShIp3KQGFFJ800EHVxoLiJII04iot/I5wflr4Z/cy4HiWJ5q0NNL7XH4BHYz71IoEPn8AAAAASUVORK5CYII=" alt="facebook-icon"></a></li>
+                <li><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOFSURBVHgBtVZLSFRRGP7Onek5A7nKdo0EkVGpqyKFnMyiTT5wo+ALpOfC0TQhFyZRYBrqItoEGkQ7aXKTD0bbFO2aScESH9Mqx5WBIxV5T/9/1NsdvXceoh8Mc+/9zznf/5//KZAERqdkvpAo1hy4AAEPJNKUQGAJOoK6jpAU8BdmiveJzhLxhIEpWSM0tNGjB8khLHW0F2SKfqRC+G5KevYJ9JE0H9uABPr/EPHVTBFOSDgyLbOdwLhxbdtH+LcO72ZSsUtktqQGobpGjciS91fSpGIFOd4cscQv2sbXPcCDXSBjePQDKvAUlIUc9o4161LGcjSq/t0uV8w38zuDrjaDr9apWAV8SBGhL5N49vwFZubm1Hv2mdO4UngRA/5BpKcfxsO21pj1e6Xi8GnsO02gyOrQ67fqca20HEOjgZjvs7PzaGi+D5f7IO7drcftG3X4EYmg42kvZkjmdrm3nCUcqOZ/5x4N2VZky8tR0n4ex45l4ElXL0KhSVRXluMIad//6rWyorvzsbE+L/csKegjJVxqnQXSxicpC6hk5VulP1vBuHOzDsHQBIZHxzBcFTB8k3v+XMz6I+npcBPZlcICpZQVdAeynVQVPFblhq9rAzWVFSgrLUIwOIHQxKSyPvf82S17FiKLijQOPE7Ki0NWEtaYwcHBAcGW5eWeUz8rzMyuBQ+7wA6ahqOaDvy0ErKmWWdOYeDNoNI8EXgd72Hl7EBd5TsFKMJ2C1qa6uEiyxopIuORLlCEso8vU1rEhcQSV5qwnZyvtbvzEVd/VFTVoYOi1YqssblVRW1ZSVFcPrIu6NQk/NQ8uzcLhyn3FhYWESHLostR43Az2L8dXT1KIU4Ru+g08AtBFaBj05I7RL5ZVk4WRUzXyFVkwz+cn8MjAVXC2M8tTb6EZFTN+r3HRa0iXO/sfZsXDdGhHz5+QpAsia7XTAb7NY/yUCmRdRrJQFCb8tIIYqTg2DfJme6x28DWcP5xJG4uzAkh8fbiCVHMj0Z7WtVRG28Pk/C1pUxGg5aQ/5uDQcgTl5RowA5D/4tar6nja2ZhwQnRQxHXjh0CRX/tpZPCb/5mObUFvkqfGg+3O9vwNa6ixGsxp2pW69lS2pBDjy+RIsgtvSKKDK/NUCwSHTBODVpqat7hvpllsyxErvBrK+jZGJbskJAwhvyzTMN+U8N20KgfRTgRiRn/AMWTTLiKEKfsAAAAAElFTkSuQmCC" alt="twitter-icon"></a></li>
+                <li><a href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMsSURBVHgBvVZLTBNBGP5mC2jSxvREORaKEoyP5aQBEymoxAtKvCgRqJEYCQeVRC8kUmL0oEbw5k0aTTBGpOBBwUAx8cGNoiRE5VFOUk41dI0a2vGfQbB0+6Bu9Ut2Z2fm3/nmf838DJvA8CeumjiOgUNlgAoGu5xgCNFYgAN+HsHAoZ3Mm24tlmry5TSvNDF0kFQlNgdB3lNdwjqRCWH/BLduM6ODcVzE3yHwIwrn0VIWSEv4fJrbtyjohzCdQdDiLmcJ88SN6ch89GlHlhBPqsRO5inoyiaZAPm0e3iKqzrCkWnuot0cR/ZhzcnFfR0hUyga47AYDKLtcrt8ZubmYACqUEjyiJfUTvmzizWca7mAZU2T3xq1g329MAB/VQkrkxoyhqZEEovBJah7dtOzC+GwBoNQZV775rkVUdxLJJGbl4tHj/swOzePxoaTktwIKK8Xcla+QzUpiQW2OxxoPd8stSsuKtow9+bdOPqePsPM7KpvK8r3o6nhFAps+ckJGR2NyfwnUFVTu6E/OjQoW8+DXnge9mIvmVpoHSb/vn47Lv1859Z13eZi4FeQBifqaknLs+v9yckpSSZMfM3dLjU6QNp1EZEtPx9X3TdSLWfNQRpYzGZ6LOv9J94B2IjEdboe9Y3NMrAEWluapfnbrrTD//5DMn+HFK7QFZMBtPA3FDsKpaaCTJiwonwfXgyN0viqKYOLS4l/5viqmKLwI0PEarzW17QwLBZzyv84cSlOukI4hSv+A+hcHVN+f/Xg3yMgKgIZNMpWdPOf+rNUQOSbCJxYTFJQaHEnj0iNm7fvJmWjHByTXOLlLGQhzqCTrjlchWVa+AsFh8g5AdGSafCZDnMHBU+BzUatHWba1ARtRESwrUCX/AFEIMuO9QtYHHGk5QSyfB8KULCcqS5lPUDM9SS0XGGok5VYNsmAzjUyAV1NI0pCcqyPJK0wDg9dSa7YAd3RdmQH87MIyiDsbgCUapfiyQRS1qUjH7mbBDqQERNe0TXkpvweSzTN0v3vo0ouClRSWLtI+mASkgXylVfh8CYj2jShbgPkYwrxVf+aKMAiCDkTFLzJ8AsNMyWPYHcQ2AAAAABJRU5ErkJggg==" alt="linkedin-icon"></a></li>
+                <li><a target="_blank" href="https://rb.gy/j2nfg"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAcCAYAAACdz7SqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOCSURBVHgBrZZLTFNBFIb/uUWMoRo2WnYCISiER7tTJIFSebgwgHGhRnlESABNwBckGsWaSIJiqEbFKAtQIysRw0J5lGIiRFcCEhHCo+4oqy7AKErHmenDlt7b3oT+SWnnzmG+OWfOOXcIVOjNFxq7awcqQJBJKHIhIRaUfdyaoBR2Nn67DoweSSH2cOuRUJPvZmj8NuCmpEGxHySkKNC17oI5FFwROvSdNmgkNKuFbZKTbsBsSiUW1VDrHG1nYWzAFsXCbjHtJxfCQiMFDAWWAoCztDmSQC5C0GD9RgPW9HnKk2a7hCW5f1xdW8PAoBWrq2tQklYbg0NZBxCn2yM37fztgsGbXD7o8AztkiSUb7YeGLLiUUenAKtR4+V6FOWbgicIRvOSidH9E8peLjscOFVWDR3bfdOleugz0xVhY+Of8fDJMzgcK3jaYUFSYmKQzd8/MBSkkQlxptEEJXILve7tF9/td1sCgAuLSyLck1PTYjw5OY3r5ts4V1MlxgODI7Ib02jcnCiPu8VyRjyk/Iy858Q9v9P2ABNTX302fO5W81U0skhke85U6eyJBjk+KKPmQoUuXrnGwCsoO30C+ox0fBz/hN6+ftwwt+DV887wC1DoBdS2RGPpenj7MQbgwLqaszhe6g4MD/lOrRbdL3uE93wjYRRrY/kj4Ze6Nje/4M6z7KyDAc8LC9yZys9VrSS1hv7n6i/H8or41snXpzzUqOJVxMULXxsTwxLpvsheLp69rfcsAhiqnPzFeSKRWH/8wdrV3lDGvOPU1VbhMWsU1bX1vucxbCNNrCHEqfN0gv+J8gz62KdezoonDy8d7iXvNPqMNFGH/LlOtxtFBYd9QF4q/HmmApE59h/qoujTkGBoYX6eaIPdL3p8hR+n06H8zEnZRXkWc2WyjclqA90C7h2PzFEbaHC9trZZGHjE0yR0UNL8wqKIyLHSozhfUy1nYs/bRxICoEMzNJfdFGxy1u9Zy+Me89ApKSkxQSRbUYFJdp66UGlKIV0BUK7hWfamQfCbZqtiZ9llTCaV3nFAnWqixQvcjsjKjjUo3xyMCcRJXDAicmA7X89oIE5FqACz4iXRMLCf3diKKD6QnzDINZ+Q917rDK0g/BoKxEO97CxpzN6kkVNI6CZ4CbPOkb0HEzjhwiQLpcWYSvrCracK6i/bHNWzIvcH29X2b6/+ATtdTnohUaxqAAAAAElFTkSuQmCC" alt="instagram-icon"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    
+  </body>
+</html>
